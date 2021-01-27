@@ -1,0 +1,23 @@
+{% include head.html %}
+
+<main data-barba="container" data-barba-namespace="ideas">
+	<div class="wo page-heading">
+		<h1 class="col-1-to-12">
+			<span>Archives for : </span>
+			<span class="page-heading__dot">{{ page.title }}</span>
+		</h1>
+	</div>
+	{% include blog-filters.html %}
+	<div class="idea-posts">
+	{% for post in page.posts limit: 10 %}
+		<a href="{{ post.url }}" class="idea-posts__post wo-full">
+			<p class="idea-posts__post__date col-1-to-3">{{ post.date | date: "%B %d, %Y" }}</p>
+			<h2 class="col-3-to-10">{{ post.title }}</h2>
+			<p aria-hidden="true" class="link right col-10-to-13" href="{{ post.url }}">Read</p>
+			<div class="background"></div>
+		</a>
+	{% endfor %}
+	</div>
+</main>
+
+{% include footer.html %}
