@@ -132,6 +132,52 @@ $(document).ready(function () {
         }
     }
 
+    // —————————————————————————————————————————
+    // Home logo color change
+    // —————————————————————————————————————————
+    window.onscroll = function () {
+        let scrollPosition = window.pageYOffset;
+        let pageHeight = window.innerHeight - 60;
+
+        if (scrollPosition > pageHeight) {
+            gsap.to(".dark-header", {
+                opacity: 1,
+                duration: 0,
+                display: "inline-block"
+            });
+            gsap.to(".light-header", {
+                opacity: 0,
+                duration: 0,
+                display: "none"
+            });
+        } else if (scrollPosition < pageHeight) {
+            gsap.to(".dark-header", {
+                opacity: 0,
+                duration: 0,
+                display: "none"
+            });
+            gsap.to(".light-header", {
+                opacity: 1,
+                duration: 0,
+                display: "inline-block"
+            });
+        }
+    };
+
+    // —————————————————————————————————————————————————————
+    // work slider
+    // —————————————————————————————————————————————————————
+    $('.work__slider').flickity({
+        cellSelector: '.work__slider__cell',
+        contain: false,
+        initialIndex: 2,
+        wrapAround: true,
+        adaptiveHeight: true,
+        percentPosition: false,
+        prevNextButtons: false,
+        pageDots: false,
+      });
+
 
     // —————————————————————————————————————————————————————
     // mobile navigation starter

@@ -1,0 +1,18 @@
+<header id="mainHeader" class="main-header">
+    <div class="main-header__logo-area">
+        <a href="#top">
+            <img class="light-header" src="/images/humanature-logo.svg" alt="Humanature" />
+            <img class="dark-header" src="/images/humanature-logo-red.svg" alt="Humanature" />
+        </a>
+    </div>
+</header>
+<div id="mainNav" class="main-nav">
+    <nav aria-label="Site Menu">
+        <a class="{% if page.url == "#work" %}active{% endif %} main-nav__link active" href="#work">Work</a>
+        <a class="{% if page.url == "#clients" %}active{% endif %} main-nav__link" href="#clients">Clients</a>
+        <a class="{% if page.url == "#about" %}active{% endif %} main-nav__link" href="#about">About</a>
+        <a class="{% if page.url == "#services" %}active{% endif %} main-nav__link" href="#services">Services</a>
+        <a class="{% if page.url == "#resources" %}active{% endif %} main-nav__link" href="#resources">Resources</a>
+        <a class="{% if page.url == "#contact" %}active{% endif %} main-nav__link" href="#contact">Contact</a>
+    </nav>
+</div>

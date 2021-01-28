@@ -55,7 +55,8 @@ $easing: cubic-bezier(0.83, 0, 0.17, 1);
 
 // font sizes
 $f105: 7.7vw;
-
+$f60: 600%;
+$f24: 240%;
 
 // ————————————————————————————————————————— 
 // M I X I N S
@@ -83,72 +84,24 @@ $f105: 7.7vw;
     font-family: "regular", sans-serif;
 }
 
-
-
-// ————————————————————————————————————————— 
-// core styles & classes
-// ————————————————————————————————————————— 
-body {
-    background-color: $offWhite !important;
+// font size 60px
+@mixin f60() {
+    font-size: $f60;
+    line-height: 0.95;
     margin: 0;
     padding: 0;
-    * {
-        font-family: "regular", sans-serif;
-    }
+    letter-spacing: -.02vw;
+    font-family: "regular", sans-serif;
 }
 
-body,
-input,
-textarea,
-radio,
-checkbox,
-.strip {
-    background-color: transparent;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1;
-    text-align: left;
-}
-
-.pv100 {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.pv170 {
-    padding-top: 170px;
-    padding-bottom: 170px;
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-    embed,
-    video,
-    object {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-/* Fixes potential theme css conflict. */
-.acf-map {
-    width: 100%;
-    height: 100vh;
-    img {
-        max-width: inherit !important;
-    }
-}
-
-li p,
-p .button {
-    font-size: 100%;
+// font size 24px
+@mixin f24() {
+    font-size: $f24;
+    line-height: 0.9;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -.02vw;
+    font-family: "regular", sans-serif;
 }
 
 
@@ -164,6 +117,11 @@ p .button {
     width: 100%;
     display: block;
     text-align: center;
+    .main-header__home {
+        position: absolute;
+        left: 50px;
+        top: -28px;
+    }
     .main-header__logo-area {
         margin: auto;
         img {
@@ -216,100 +174,102 @@ p .button {
 // Typography
 // —————————————————————————————————————————
 
-.st {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    li {
-        margin: 0;
-        padding: 0;
-        font-size: 180%;
-        letter-spacing: .2px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+    margin: 0;
+    padding: 0;
+    font-size: 180%;
+    letter-spacing: .2px;
+    color: $black4;
+    line-height: 1.15;
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "regular", sans-serif;
+}
+
+p,
+li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-family: "light", sans-serif;
+}
+
+.hero-text-block {
+    @include f105();
+    color: $red;
+    strong,
+    span {
         color: $black4;
-        line-height: 1.15;
-        text-align: left;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "regular", sans-serif;
-    }
-
-    p,
-    li {
-        margin: 0;
-        padding: 0;
-        margin-bottom: 10px;
-        font-family: "light", sans-serif;
-    }
-
-    a {
-        text-decoration: underline;
-    }
-
-    p.small {
-        font-size: 140%;
-    }
-
-    // ————————————————————————————— lists
-
-    ul {
-        list-style-type: disc;
-    }
-
-    ul ul {
-        margin-top: 10px;
-        margin-bottom: 20px;
-        list-style-type: circle;
-    }
-
-    ul ul ul {
-        list-style-type: square;
-    }
-
-    ol {
-        list-style-type: decimal;
-    }
-
-    ol ol {
-        margin-top: 10px;
-        margin-bottom: 20px;
-        list-style-type: lower-alpha;
-    }
-
-    ol ol ol {
-        list-style-type: lower-roman;
-    }
-
-    ol ol,
-    ul ol {
-        list-style-type: lower-roman;
-    }
-
-    li li {
-        font-size: 100%;
-    }
-
-    iframe {
-        width: 100%;
     }
 }
 
-.hero-text-block,
-.st .hero-text-block {
-    @include f105();
+a {
+    text-decoration: underline;
+}
+
+p.small {
+    font-size: 140%;
+}
+
+.red {
     color: $red;
-    strong {
-        color: $black4;
-    }
+}
+
+// ————————————————————————————— lists
+
+ul {
+    list-style-type: disc;
+}
+
+ul ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    list-style-type: circle;
+}
+
+ul ul ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ol ol {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    list-style-type: lower-alpha;
+}
+
+ol ol ol {
+    list-style-type: lower-roman;
+}
+
+ol ol,
+ul ol {
+    list-style-type: lower-roman;
+}
+
+li li {
+    font-size: 100%;
+}
+
+iframe {
+    width: 100%;
 }
 
 // ————————————————————————————————————————— 
@@ -344,7 +304,7 @@ p .button {
     }
 }
 
-.our-clients__clients {
+.gallery {
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -372,22 +332,143 @@ p .button {
     }
 }
 
+.lg-list {
+    ul {
+        list-style-type: none !important;
+        li {
+            font-size: $f60;
+            color: $red;
+            font-family: "regular";
+        }
+    }
+}
+
+.services {
+    .services__service {
+        h3 {
+            color: $red;
+            font-size: $f105;
+            margin-bottom: 60px;
+        }
+        h4 {
+            color: $red;
+            @include f24();
+            margin-top: 60px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.resources {
+    .resources__nav {
+        margin-top: 0;
+        a {
+            margin-right: 4px;
+        }
+    }
+    .resources__post {
+        a {
+            text-decoration: none;
+            height: 23vw;
+            margin-bottom: 55px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(66, 66, 66, 0.1);
+            .background {
+                @include background-fill();
+                height: 100%;
+                grid-row-end: span 2;
+            }
+            h4 {
+                @include f60();
+                color: $red;
+                margin-top: -18px;
+            }
+            .button {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+    .resources__archives-cta {
+        text-align: left;
+        border-top: 1px solid rgba(66, 66, 66, 0.1);
+    }
+}
+
+.work {
+    .work__slider {
+        margin-top: 330px;
+        .work__slider__cell {
+            height: 400px;
+            .work__slider__cell__content {
+                margin-bottom: 90px;
+                position: absolute;
+                top: -360px;
+                transition: .3s opacity;
+            }
+            .work__slider__cell__subtitle {
+                @include f24();
+                color: $red;
+                margin-bottom: 50px;
+                margin-top: 10px;
+            }
+            .work__slider__cell__subtitle,
+            h3 {
+                width: 49%;
+                display: inline-block;
+            }
+            img {
+                padding-right: 55px;
+            }
+        }
+        .work__slider__cell:not(.is-selected) {
+            height: 290px;
+            .work__slider__cell__content {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+
+// ————————————————————————————————————————— 
+// slider
+// —————————————————————————————————————————
+.flickity-viewport {
+    overflow: visible !important;
+    .work__slider__cell {
+        width: 386px;
+    }
+}
+  
+
 // ————————————————————————————————————————— 
 // buttons
 // —————————————————————————————————————————
 
+.resources__nav a,
 .button {
     margin-top: 20px;
     background-color: $red;
     color: $white;
     border-radius: 60px;
+    border: none;
     display: inline-block;
-    padding: 15px;
+    padding: 10px 15px 13px 15px;
     text-decoration: none !important;
     line-height: 1;
     font-size: 180%;
     &:hover {}
 }
+
+.resources__nav a:not(.active),
+.button--white {
+    color: $black2;
+    background-color: $white;
+}
+
+
 
 
 // ————————————————————————————————————————— 
@@ -395,6 +476,78 @@ p .button {
 // —————————————————————————————————————————
 
 #footer {}
+
+// ————————————————————————————————————————— 
+// core styles & classes
+// ————————————————————————————————————————— 
+body {
+    background-color: $offWhite !important;
+    margin: 0;
+    padding: 0;
+    * {
+        font-family: "regular", sans-serif;
+    }
+}
+
+body,
+input,
+textarea,
+radio,
+checkbox,
+.strip {
+    background-color: transparent;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    text-align: left;
+}
+
+.pv60,
+.lg-list li {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.pv100 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.pv170 {
+    margin-top: 170px;
+    margin-bottom: 170px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    embed,
+    video,
+    object {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Fixes potential theme css conflict. */
+.acf-map {
+    width: 100%;
+    height: 100vh;
+    img {
+        max-width: inherit !important;
+    }
+}
+
+li p,
+p .button {
+    font-size: 100%;
+}
 
 
 // —————————————————————————————————————————
