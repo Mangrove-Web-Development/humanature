@@ -1,3 +1,18 @@
+function checkPagePosition() {
+    let activeLink = document.querySelector('.main-nav__link.active');
+    let activeIndicator = document.querySelector('.active-indicator');
+    let activeLinkWidth = activeLink.offsetWidth;
+    let activeLinkPosition = activeLink.getBoundingClientRect();
+
+    console.log(activeLinkPosition);
+
+    gsap.to(activeIndicator, {
+        duration: 0,
+        width: activeLinkWidth,
+        left: activeLinkPosition.left,
+    });
+}
+
 // —————————————————————————————————————————————————————
 // Check browser & and inform user if it is out of date
 // —————————————————————————————————————————————————————
@@ -73,28 +88,6 @@ function is_touch_device() {
     document.addEventListener('keydown', keyboardFocus, false);
 })();
 
-
-// —————————————————————————————————————————————————————
-// make bg image square function
-// —————————————————————————————————————————————————————
-// add class "make-square" to elements
-// not tested, may be broken. contact Nikki if broken
-document.addEventListener("DOMContentLoaded", function () {
-    let squim = $('.make-square');
-
-    if (squim) {
-        function squareImage() {
-            let squimWidth = $('.make-square').width();
-            $('.make-square').css("height", squimWidth + 'px');
-        }
-        // init
-        squareImage();
-        window.addEventListener("resize", squareImage);
-    }
-});
-
-
-
 // Remember to minimize this file before putting into production site
 
 
@@ -106,6 +99,21 @@ $(document).ready(function () {
     $(window).scroll(function () {
 
     });
+
+    // —————————————————————————————————————————————————————
+    // site navigation
+    // —————————————————————————————————————————————————————
+    checkPagePosition();
+    
+    $('.main-nav__link').click(function(){
+        // proper classes
+        $('.main-nav__link').removeClass('active');
+        $(this).addClass('active');
+
+        checkPagePosition();
+    });
+
+
 
 
     // —————————————————————————————————————————————————————

@@ -1919,15 +1919,30 @@ img[class*="col-"] {
 .main-nav nav .main-nav__link {
   padding: 19px 16px 23px 16px;
   margin: 4px;
-  border-radius: 60px;
   color: #202020;
   font-size: 180%;
   line-height: 0;
 }
 
+.main-nav nav .main-nav__link span {
+  position: relative;
+  z-index: 12;
+}
+
 .main-nav nav .main-nav__link.active {
-  background-color: #FC4336;
   color: #F9F8F8;
+  transition: .3s color ease-in;
+}
+
+.main-nav nav .active-indicator {
+  position: absolute;
+  top: 4px;
+  background-color: #FC4336;
+  height: calc(100% - 8px);
+  width: 80px;
+  display: block;
+  border-radius: 60px;
+  transition: .3s all;
 }
 
 h1,

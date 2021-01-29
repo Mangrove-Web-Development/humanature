@@ -156,14 +156,27 @@ $f24: 240%;
         .main-nav__link {
             padding: 19px 16px 23px 16px;
             margin: 4px;
-            border-radius: 60px;
             color: $black2;
             font-size: 180%;
             line-height: 0;
-            &.active {
-                background-color: $red;
-                color: $offWhite;
+            span {
+                position: relative;
+                z-index: 12;
             }
+            &.active {
+                color: $offWhite;
+                transition: .3s color ease-in;
+            }
+        }
+        .active-indicator {
+            position: absolute;
+            top: 4px;
+            background-color: $red;
+            height: calc(100% - 8px);
+            width: 80px;
+            display: block;
+            border-radius: 60px;
+            transition: .3s all;
         }
     }
 }
