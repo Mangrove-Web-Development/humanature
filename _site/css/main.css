@@ -2258,6 +2258,7 @@ iframe {
 
 body {
   background-color: #F9F8F8 !important;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }

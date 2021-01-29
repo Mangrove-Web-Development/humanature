@@ -93,6 +93,16 @@ function is_touch_device() {
 
 
 $(document).ready(function () {
+    // —————————————————————————————————————————
+    // L O C O M O T I V E
+    // —————————————————————————————————————————
+    scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        smoothMobile: true
+    });
+    scroll.init();
+
     // —————————————————————————————————————————————————————
     // scroll events 
     // —————————————————————————————————————————————————————
@@ -104,7 +114,7 @@ $(document).ready(function () {
     // site navigation
     // —————————————————————————————————————————————————————
     checkPagePosition();
-    
+
     $('.main-nav__link').click(function(){
         // proper classes
         $('.main-nav__link').removeClass('active');
