@@ -47,7 +47,6 @@
 </head>
 
 <body id="bodyID" data-barba="wrapper">
-
 <header id="mainHeader" class="main-header">
     <div class="main-header__logo-area" data-scroll-sticky>
         <a href="#top">
@@ -67,7 +66,8 @@
         </nav>
     </div>
 </header>
-    <div data-scroll-container>
+
+<div data-scroll-container>
     <main data-barba="container" data-barba-namespace="home">
         <div class="home-hero">
             <h1 class="editable">Design for Humanity</h1>
@@ -78,10 +78,8 @@
             <div class="wo pv170">
                 <h2 class=" col-1-to-12 editable">Design for Humanity</h2>
                 <p class="hero-text-block col-1-to-12 editable">
-                    We are a design strategy firm that works with leaders and their organizations to put <strong>humans
-                        at
-                        the
-                        center</strong>.
+                    We are a design strategy firm that works with leaders and their organizations to put 
+                    <strong>humans at the center</strong>.
                 </p>
             </div>
 
@@ -445,7 +443,82 @@
                 <a class="button" href="/resources/">Resource Archives</a>
             </div>
         </section>
+
+        <section id="contact" class="contact red-bg wo-full">
+            <div class="background col-1-to-6" 
+                 style="background-image: url('/images/placeholder.jpg');">
+            </div>
+            <h2 class="color-change col-7-to-13">
+                Contact us today to begin unlocking your team's full
+                <strong>human potential.</strong>
+            </h2>
+            <form class="col-7-to-13" method="post" action="/message-sent/">
+                <label for="name" class="half">
+                    <span class="sr-only label-wrapper">Name</span>
+                    <span class="required sr-only">(required)</span>
+                    <input id="name" name="name" placeholder="Name*" required="" type="text"
+                        pattern="(?! )[A-Za-z ]*">
+                </label>
+                <label for="organization" class="half">
+                    <span class="sr-only label-wrapper">Organization</span>
+                    <input id="organization" name="organization" placeholder="Organization" type="text"
+                        pattern="(?! )[A-Za-z ]*">
+                </label>
+                <label for="email" class="half">
+                    <span class="sr-only label-wrapper">Email Address</span>
+                    <span class="required hidden">(required)</span>
+                    <input id="email" name="email" class="" placeholder="Email*" required="" type="email">
+                </label>
+                <label for="subject" class="half">
+                    <span class="sr-only label-wrapper">Subject</span>
+                    <span class="required sr-only">(required)</span>
+                    <input id="subject" name="subject" placeholder="Subject*" required="" type="text"
+                        pattern="(?! )[A-Za-z ]*">
+                </label>
+                <label for="message" class="full">
+                    <span class="sr-only label-wrapper">Message</span>
+                    <span class="required sr-only">(required)</span>
+                    <textarea id="message" name="message" required=""
+                        placeholder="Message..."
+                        pattern="(?! )[A-Za-z ]*"></textarea>
+                </label>
+
+                <!-- gotcha/honeypot -->
+                <input type="text" name="_gotcha" style="display: none;">
+
+                <!-- hidden fields to route the form to us -->
+                <input type="hidden" name="_to" value="support@manoverboard.com">
+                <input type="hidden" name="_subject" value="Website contact form submission.">
+
+                <button class="button button--white" type="submit">
+                    Submit →
+                </button>
+            </form>
+        </section>
     </main>
+
+    <footer class="footer gray-bg wo-full">
+        <img class="col-1-to-3" src="/images/humanature-icon-white.svg" alt="Humanature Icon">
+        <div class="col-1-to-4">
+            <h2>Address</h2>
+            <address>
+                The Innovation Center 3401 <br>
+                3401 Market Street Philadelphia <br>
+                PA 19104
+            </address>
+        </div>
+        <div class="col-4-to-8">
+            <h2>Email</h2>
+            <a href="mailto:info@humanature.com">info@humanature.com</a>
+        </div>
+        <div class="col-8-to-13">
+            <h2>Sign up for our newsletter</h2>
+            <p>Need newsletter signup form</p>
+        </div>
+        <small class="full-width">
+            ©Humanature Copyright 2021
+        </small>
+    </footer>
 
     <footer id="mainFooter" class="main-footer wo">
 

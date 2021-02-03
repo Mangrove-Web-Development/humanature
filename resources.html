@@ -4,61 +4,64 @@ title: Home
 {% include head.html %}
 {% include navigation-resources.html %}
 
-<main data-barba="container" data-barba-namespace="home">
-    <div class="wo">
-        <h1 class="hero-text-block full-width center pv100">Resources <span>Archive</span></h1>
-    </div>
-
-    <div id="resources" class="resources pv10">
+<div data-scroll-container>
+    <main data-barba="container" data-barba-namespace="home">
         <div class="wo">
-            
-            <nav class="full-width resources__nav pv100" aria-label="Resource Categories">
-                <a class="active" href="/resources/">All</a>
-                <a href="/resources/presentations/">Presentations</a>
-                <a href="/resources/press-releases/">Press releases</a>
-                <a href="/resources/events/">Events</a>
-                <a href="/resources/books/">Books</a>
-                <a href="/resources/articles/">Articles</a>
-            </nav>
-            <h3 class="editable col-1-to-3">Most Recent</h3>
+            <h1 class="hero-text-block full-width center pv100">Resources <span>Archive</span></h1>
         </div>
-        <article class="resources__post">
-            <a class="wo" href="">
-                <div class="background col-1-to-5" style="background-image: url('/images/placeholder.jpg');" alt="">
-                </div>
-                <h4 class="col-5-to-11">Resource Title Goes Here</h4>
-                <h5 class="col-5-to-11 bottom">Resource Category</h5>
-                <div class="button">
-                    <img src="/images/right-arrow.svg" alt="Arrow">
-                </div>
-            </a>
-        </article>
-        <article class="resources__post">
-            <a class="wo" href="">
-                <div class="background col-1-to-5" style="background-image: url('/images/placeholder.jpg');" alt="">
-                </div>
-                <h4 class="col-5-to-11">Resource Title Goes Here</h4>
-                <h5 class="col-5-to-11 bottom">Resource Category</h5>
-                <div class="button">
-                    <img src="/images/right-arrow.svg" alt="Arrow">
-                </div>
-            </a>
-        </article>
-        <article class="resources__post">
-            <a class="wo" href="">
-                <div class="background col-1-to-5" style="background-image: url('/images/placeholder.jpg');" alt="">
-                </div>
-                <h4 class="col-5-to-11">Resource Title Goes Here</h4>
-                <h5 class="col-5-to-11 bottom">Resource Category</h5>
-                <div class="button">
-                    <img src="/images/right-arrow.svg" alt="Arrow">
-                </div>
-            </a>
-        </article>
-        <div class="resources__archives-cta wo-stacked">
-            <button class="button" type="button">Load More ↓</button>
-        </div>
-    </div>
-</main>
 
-{% include footer.html %}
+        <div id="resources" class="resources pv10">
+            <div class="wo">
+
+                <nav class="full-width resources__nav pv100" aria-label="Resource Categories">
+                    <a class="active" href="/resources/">All</a>
+                    <a href="/resources/presentations/">Presentations</a>
+                    <a href="/resources/press-releases/">Press releases</a>
+                    <a href="/resources/events/">Events</a>
+                    <a href="/resources/books/">Books</a>
+                    <a href="/resources/articles/">Articles</a>
+                </nav>
+                <h3 class="editable col-1-to-3">Most Recent</h3>
+            </div>
+            <article class="resources__post">
+                <a class="wo" href="">
+                    <div class="background col-1-to-5" style="background-image: url('/images/placeholder.jpg');" alt="">
+                    </div>
+                    <h4 class="col-5-to-11">Resource Title Goes Here</h4>
+                    <h5 class="col-5-to-11 bottom">Resource Category</h5>
+                    <div class="button">
+                        <img src="/images/right-arrow.svg" alt="Arrow">
+                    </div>
+                </a>
+            </article>
+            <article class="resources__post">
+                <a class="wo" href="">
+                    <div class="background col-1-to-5" style="background-image: url('/images/placeholder.jpg');" alt="">
+                    </div>
+                    <h4 class="col-5-to-11">Resource Title Goes Here</h4>
+                    <h5 class="col-5-to-11 bottom">Resource Category</h5>
+                    <div class="button">
+                        <img src="/images/right-arrow.svg" alt="Arrow">
+                    </div>
+                </a>
+            </article>
+            <article class="resources__post">
+                <a class="wo" href="">
+                    <div class="background col-1-to-5" style="background-image: url('/images/placeholder.jpg');" alt="">
+                    </div>
+                    <h4 class="col-5-to-11">Resource Title Goes Here</h4>
+                    <h5 class="col-5-to-11 bottom">Resource Category</h5>
+                    <div class="button">
+                        <img src="/images/right-arrow.svg" alt="Arrow">
+                    </div>
+                </a>
+            </article>
+            <div class="resources__archives-cta wo-stacked">
+                <button class="button" type="button">Load More ↓</button>
+            </div>
+        </div>
+    </main>
+
+    {% include footer.html %}
+
+</div> <!-- end locomotive scroll -->

@@ -671,7 +671,7 @@ textarea {
 }
 
 .wo-full {
-  padding: 40px 0;
+  padding: 40px 50px;
 }
 
 img[class^="col-"],
@@ -1952,7 +1952,10 @@ h4,
 h5,
 h6,
 p,
-li {
+li,
+a,
+address,
+textarea {
   margin: 0;
   padding: 0;
   font-size: 180%;
@@ -1990,8 +1993,10 @@ li {
 }
 
 .hero-text-block strong,
-.hero-text-block span {
-  color: #424242;
+.hero-text-block span,
+.color-change strong,
+.color-change span {
+  color: #424242 !important;
 }
 
 a {
@@ -2228,6 +2233,94 @@ iframe {
   opacity: 0;
 }
 
+.contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contact .background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  grid-row-end: span 2;
+}
+
+.contact h2 {
+  font-size: 600%;
+  line-height: 0.95;
+  margin: 0;
+  padding: 0;
+  letter-spacing: -.02vw;
+  font-family: "regular", sans-serif;
+}
+
+.contact form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.contact form .half {
+  width: 45%;
+}
+
+.contact form .full {
+  width: 100%;
+}
+
+.contact form ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #F9F8F8 !important;
+  opacity: 1;
+  /* Firefox */
+}
+
+.contact form :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #F9F8F8 !important;
+}
+
+.contact form ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #F9F8F8 !important;
+}
+
+.contact form input {
+  width: 100%;
+  font-size: 240%;
+  line-height: 1;
+  border-bottom: 1px solid rgba(66, 66, 66, 0.2);
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.contact form textarea {
+  width: 100%;
+  height: 6em;
+  border-bottom: 1px solid rgba(66, 66, 66, 0.2);
+}
+
+.footer img {
+  margin-bottom: 16vw;
+}
+
+.footer div {
+  padding-top: 35px;
+  border-top: 1px solid #FFFFFF;
+}
+
+.footer h2,
+.footer small {
+  opacity: .5;
+  font-size: 150%;
+}
+
+.footer small {
+  margin-top: 130px;
+}
+
 .flickity-viewport {
   overflow: visible !important;
 }
@@ -2250,9 +2343,10 @@ iframe {
   font-size: 180%;
 }
 
-.resources__nav a:not(.active),
-.button--white {
-  color: #202020;
+.red-bg .button--white,
+.button--white,
+.resources__nav a:not(.active) {
+  color: #202020 !important;
   background-color: #FFFFFF;
 }
 
@@ -2278,6 +2372,8 @@ checkbox,
   font-style: normal;
   line-height: 1;
   text-align: left;
+  border: none;
+  box-shadow: none;
 }
 
 .pv60,
@@ -2314,6 +2410,22 @@ checkbox,
   height: 100%;
 }
 
+.red-bg {
+  background-color: #FC4336;
+}
+
+.red-bg * {
+  color: #F9F8F8 !important;
+}
+
+.gray-bg {
+  background-color: #424242;
+}
+
+.gray-bg * {
+  color: #FFFFFF !important;
+}
+
 /* Fixes potential theme css conflict. */
 .acf-map {
   width: 100%;
@@ -2325,7 +2437,8 @@ checkbox,
 }
 
 li p,
-p .button {
+p .button,
+article a {
   font-size: 100%;
 }
 
