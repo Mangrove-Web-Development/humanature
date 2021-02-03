@@ -58,7 +58,7 @@ img[class*="col-"] {
     place-self: start;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 600px) {
     .l-hide {
         display: none !important;
     }
@@ -79,35 +79,35 @@ img[class*="col-"] {
     }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
-    // medium
-    .wo,
-    .wo-full {
-        display: grid;
-        grid-template-columns: repeat($column-count-m, 1fr);
-        gap: $column-margin + px $column-margin + px;
-        justify-items: stretch;
-        align-items: start;
-    }
+// @media only screen and (min-width: 600px) and (max-width: 1200px) {
+//     // medium
+//     .wo,
+//     .wo-full {
+//         display: grid;
+//         grid-template-columns: repeat($column-count-m, 1fr);
+//         gap: $column-margin + px $column-margin + px;
+//         justify-items: stretch;
+//         align-items: start;
+//     }
 
-    .m-hide {
-        display: none !important;
-    }
+//     .m-hide {
+//         display: none !important;
+//     }
 
-    .full-width {
-        grid-column-start: 1;
-        grid-column-end: $column-count-m + 1;
-    }
+//     .full-width {
+//         grid-column-start: 1;
+//         grid-column-end: $column-count-m + 1;
+//     }
 
-    @for $a-m from 1 through ($column-count-m) {
-        @for $b-m from 1 through ($column-count-m + 1) {
-            .m-col-#{$a-m}-to-#{$b-m} {
-                grid-column-start: $a-m;
-                grid-column-end: $b-m;
-            }
-        }
-    }
-}
+//     @for $a-m from 1 through ($column-count-m) {
+//         @for $b-m from 1 through ($column-count-m + 1) {
+//             .m-col-#{$a-m}-to-#{$b-m} {
+//                 grid-column-start: $a-m;
+//                 grid-column-end: $b-m;
+//             }
+//         }
+//     }
+// }
 
 @media only screen and (max-width: 600px) {
     // small (mobile)

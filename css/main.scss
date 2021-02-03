@@ -221,7 +221,7 @@ li {
     margin: 0;
     padding: 0;
     margin-bottom: 10px;
-    font-family: "light", sans-serif;
+    font-family: "light", sans-serif !important;
 }
 
 .hero-text-block {
@@ -349,6 +349,14 @@ iframe {
     }
     p {
         margin-right: 10%;
+    }
+}
+
+.graphic-layer {
+    h3 {
+        font-size: 360%;
+        line-height: .9;
+        margin-bottom: 25px;
     }
 }
 
