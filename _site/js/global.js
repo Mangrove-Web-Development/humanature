@@ -4,14 +4,21 @@ function checkPagePosition() {
     let activeLinkWidth = activeLink.offsetWidth;
     let activeLinkPosition = activeLink.getBoundingClientRect();
 
-    console.log(activeLinkPosition);
-
     gsap.to(activeIndicator, {
         duration: 0,
         width: activeLinkWidth,
         left: activeLinkPosition.left,
     });
 }
+
+// http://jsfiddle.net/bfd7w/2/
+function checkPagePositionScrolled(el) {
+    var topOfObject = el.offset().top;
+    var bottomOfWindow = $(window).scrollTop() + $(window).height();
+    if (bottomOfWindow >= topOfObject) {
+        console.log(el.attr('id'));
+    }
+};
 
 // —————————————————————————————————————————————————————
 // Check browser & and inform user if it is out of date
@@ -69,7 +76,7 @@ function is_touch_device() {
 (function () {
     'use strict';
 
-    function keyboardFocus (e) {
+    function keyboardFocus(e) {
         if (e.keyCode !== 9) {
             return;
         }
@@ -106,8 +113,42 @@ $(document).ready(function () {
     // —————————————————————————————————————————————————————
     // scroll events 
     // —————————————————————————————————————————————————————
-    $(window).scroll(function () {
+    scroll.on('scroll', (position) => {
+        // —————————————————————————————————————————
+        // Home logo color change
+        // —————————————————————————————————————————
+        let pageHeight = window.innerHeight - 240;
 
+        if (position.scroll.y > pageHeight) {
+            gsap.to(".dark-header", {
+                opacity: 1,
+                duration: 0,
+                display: "inline-block"
+            });
+            gsap.to(".light-header", {
+                opacity: 0,
+                duration: 0,
+                display: "none"
+            });
+        } else if (position.scroll.y < pageHeight) {
+            gsap.to(".dark-header", {
+                opacity: 0,
+                duration: 0,
+                display: "none"
+            });
+            gsap.to(".light-header", {
+                opacity: 1,
+                duration: 0,
+                display: "inline-block"
+            });
+        }
+
+        // —————————————————————————————————————————
+        // Set nav highlight
+        // —————————————————————————————————————————
+        // $('section').each(function () {
+        //     setInterval(checkPagePositionScrolled, 3000, $(this));
+        // });
     });
 
     // —————————————————————————————————————————————————————
@@ -115,7 +156,7 @@ $(document).ready(function () {
     // —————————————————————————————————————————————————————
     checkPagePosition();
 
-    $('.main-nav__link').click(function(){
+    $('.main-nav__link').click(function () {
         // proper classes
         $('.main-nav__link').removeClass('active');
         $(this).addClass('active');
@@ -130,15 +171,15 @@ $(document).ready(function () {
     // search dropdown
     // —————————————————————————————————————————————————————
     var clicked = false;
-    
-    $('#toggleSearch').click(function() {
-        toggleBtnClick();
-    });  
-    
-    $('#searchClose').click(function() {
+
+    $('#toggleSearch').click(function () {
         toggleBtnClick();
     });
-    
+
+    $('#searchClose').click(function () {
+        toggleBtnClick();
+    });
+
     function toggleBtnClick() {
         if (clicked) {
             $('#searchContainer').addClass('search--hide');
@@ -149,38 +190,6 @@ $(document).ready(function () {
             $('#s').focus();
         }
     }
-
-    // —————————————————————————————————————————
-    // Home logo color change
-    // —————————————————————————————————————————
-    window.onscroll = function () {
-        let scrollPosition = window.pageYOffset;
-        let pageHeight = window.innerHeight - 60;
-
-        if (scrollPosition > pageHeight) {
-            gsap.to(".dark-header", {
-                opacity: 1,
-                duration: 0,
-                display: "inline-block"
-            });
-            gsap.to(".light-header", {
-                opacity: 0,
-                duration: 0,
-                display: "none"
-            });
-        } else if (scrollPosition < pageHeight) {
-            gsap.to(".dark-header", {
-                opacity: 0,
-                duration: 0,
-                display: "none"
-            });
-            gsap.to(".light-header", {
-                opacity: 1,
-                duration: 0,
-                display: "inline-block"
-            });
-        }
-    };
 
     // —————————————————————————————————————————————————————
     // work slider
@@ -194,7 +203,7 @@ $(document).ready(function () {
         percentPosition: false,
         prevNextButtons: false,
         pageDots: false,
-      });
+    });
 
 
     // —————————————————————————————————————————————————————
@@ -202,36 +211,36 @@ $(document).ready(function () {
     // —————————————————————————————————————————————————————
     // set vars to "nav is closed"
     var clickedNav = false;
-    
+
     // --------------------------------- toggleNav Function
     function toggleNav() {
         // if var is true (nav is open), then close the nav and reset the var to false (nav is closed)
         if (!clickedNav) {
-            TweenMax.to( $('#navContainer'), 1, {
+            TweenMax.to($('#navContainer'), 1, {
                 ease: Elastic.easeOut.config(1, 0.75),
                 top: "0"
             });
             clickedNav = false;
         }
     }
-    
+
     // if the nav button is clicked, execute function
     jQuery('#toggleNav').click(function () {
         toggleNav();
     });
-    
+
     // --------------------------------- closeNav Function
     function closeNav() {
         clickedSubNav = false;
         // close main nav
-        TweenMax.to( $('#navContainer'), .75, {
+        TweenMax.to($('#navContainer'), .75, {
             ease: Elastic.easeIn.config(1, 0.75),
             top: "-100vh"
         });
         // reset the var to false/closed
         clickedSubNav = false;
     }
-    
+
     // if the close (x) button is clicked, execute the function
     jQuery('#closeNav').click(function () {
         closeNav();
