@@ -11,13 +11,22 @@ function checkPagePosition() {
     });
 }
 
+// —————————————————————————————————————————
+// Set nav highlight
 // http://jsfiddle.net/bfd7w/2/
+// —————————————————————————————————————————
 function checkPagePositionScrolled(el) {
     var topOfObject = el.offset().top;
-    var bottomOfWindow = $(window).scrollTop() + $(window).height();
+    var bottomOfWindow = $(window).scrollTop() + window.innerHeight;
+    let currentSection = el.attr('id');
     if (bottomOfWindow >= topOfObject) {
-        console.log(el.attr('id'));
+        if (currentSection != undefined) {
+            $('.main-nav__link').removeClass('active');
+            $('.' + currentSection).addClass('active');
+        }
     }
+
+    checkPagePosition();
 };
 
 // —————————————————————————————————————————————————————
@@ -144,11 +153,15 @@ $(document).ready(function () {
         }
 
         // —————————————————————————————————————————
-        // Set nav highlight
-        // —————————————————————————————————————————
-        // $('section').each(function () {
-        //     setInterval(checkPagePositionScrolled, 3000, $(this));
-        // });
+        // Navigation active class change
+        // —————————————————————————————————————————   
+        let scrollInterval = Math.round(position.scroll.y % 200);
+
+        if (scrollInterval == 0) {
+            $('section').each(function () {
+                checkPagePositionScrolled($(this));
+            });
+        }
     });
 
     // —————————————————————————————————————————————————————
