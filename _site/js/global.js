@@ -155,7 +155,7 @@ $(document).ready(function () {
         // —————————————————————————————————————————
         // Navigation active class change
         // —————————————————————————————————————————   
-        let scrollInterval = Math.round(position.scroll.y % 200);
+        let scrollInterval = Math.round(position.scroll.y % 100);
 
         if (scrollInterval == 0) {
             $('section').each(function () {
