@@ -141,7 +141,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        smoothMobile: true
+        smoothMobile: true,
+        lerp: 0.13
     });
     scroll.destroy()
 
