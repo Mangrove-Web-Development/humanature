@@ -507,7 +507,9 @@ iframe {
         margin-top: 330px;
 
         .work__slider__cell {
+            transition: .2s all $easing;
             height: 400px;
+            bottom: 0;
 
             .work__slider__cell__content {
                 margin-bottom: 90px;
@@ -531,6 +533,8 @@ iframe {
 
             img {
                 padding-right: 55px;
+                height: 100%;
+                object-fit: cover;
             }
         }
 
