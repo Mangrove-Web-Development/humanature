@@ -145,7 +145,7 @@ $f24: 240%;
     bottom: 40px;
     text-align: center;
     nav {
-        background-color: $offWhite;
+        background-color: $white;
         border-radius: 60px;
         margin: auto;
         height: 48px;
@@ -299,6 +299,8 @@ iframe {
     width: 100vw;
     height: 100vh;
     background-color: #000000;
+    position: relative;
+    overflow: hidden;
     h1 {
         position: relative;
         z-index: 1;
@@ -314,10 +316,10 @@ iframe {
     .home-hero__background {
         @include background-fill();
         width: 100vw;
-        height: 100vh;
+        height: 110vh;
         position: absolute;
         left: 0;
-        top: 0;
+        top: -1vh;
         right: 0;
         bottom: 0;
         opacity: .8;
@@ -376,6 +378,9 @@ iframe {
 
 .services {
     .services__service {
+        img {
+            padding-right: 20%;
+        }
         h3 {
             color: $red;
             font-size: $f105;
@@ -386,6 +391,39 @@ iframe {
             @include f24();
             margin-top: 60px;
             margin-bottom: 15px;
+        }
+        h4, p {
+            padding-right: 30%;
+        }
+    }
+}
+
+.expanders {
+    margin-top: 60px;
+    .expander {
+        background-color: $white;
+        padding: 20px;
+        margin-bottom: 2px;
+        cursor: pointer;
+        h5 {
+            font-family: "light", sans-serif;
+            color: $red;
+            font-size: 180%;
+            line-height: 1;
+            position: relative;
+            &:after {
+                font-family: "light", sans-serif;
+                content: "+";
+                position: absolute;
+                right: 0;
+            }
+        }
+        .expander__content {
+            display: none;
+            margin-top: 10px;
+            &.visible {
+                display: block;
+            }
         }
     }
 }
@@ -586,6 +624,11 @@ iframe {
 // ————————————————————————————————————————— 
 // core styles & classes
 // ————————————————————————————————————————— 
+html,
+body {
+    height: 100vh;
+}
+
 body {
     background-color: $offWhite !important;
     height: 100vh;

@@ -1448,7 +1448,7 @@ img[class*="col-"] {
 }
 
 .main-nav nav {
-  background-color: #F9F8F8;
+  background-color: #FFFFFF;
   border-radius: 60px;
   margin: auto;
   height: 48px;
@@ -1598,6 +1598,8 @@ iframe {
   width: 100vw;
   height: 100vh;
   background-color: #000000;
+  position: relative;
+  overflow: hidden;
 }
 
 .home-hero h1 {
@@ -1618,10 +1620,10 @@ iframe {
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -1vh;
   right: 0;
   bottom: 0;
   opacity: .8;
@@ -1676,6 +1678,10 @@ iframe {
   font-family: "regular";
 }
 
+.services .services__service img {
+  padding-right: 20%;
+}
+
 .services .services__service h3 {
   color: #FC4336;
   font-size: 7.7vw;
@@ -1692,6 +1698,45 @@ iframe {
   font-family: "regular", sans-serif;
   margin-top: 60px;
   margin-bottom: 15px;
+}
+
+.services .services__service h4, .services .services__service p {
+  padding-right: 30%;
+}
+
+.expanders {
+  margin-top: 60px;
+}
+
+.expanders .expander {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.expanders .expander h5 {
+  font-family: "light", sans-serif;
+  color: #FC4336;
+  font-size: 180%;
+  line-height: 1;
+  position: relative;
+}
+
+.expanders .expander h5:after {
+  font-family: "light", sans-serif;
+  content: "+";
+  position: absolute;
+  right: 0;
+}
+
+.expanders .expander .expander__content {
+  display: none;
+  margin-top: 10px;
+}
+
+.expanders .expander .expander__content.visible {
+  display: block;
 }
 
 .resources .resources__nav {
@@ -1900,6 +1945,11 @@ iframe {
 .resources__nav a:not(.active) {
   color: #202020 !important;
   background-color: #FFFFFF;
+}
+
+html,
+body {
+  height: 100vh;
 }
 
 body {

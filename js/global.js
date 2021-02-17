@@ -55,14 +55,27 @@ try {
     window.attachEvent("onload", $buo_f)
 }
 
-
-
 // —————————————————————————————————————————————————————
 // add class to target users with js or no js
 // —————————————————————————————————————————————————————
 document.documentElement.classList.remove("no-js");
 document.documentElement.classList.add("js");
 
+function a11yClick(event) {
+    // —————————————————————————————————————————
+    // Accessible Click function
+    // —————————————————————————————————————————
+    if (event.type === "click") {
+        return true;
+    } else if (event.type === "keypress") {
+        var code = event.charCode || event.keyCode;
+        if (code === 32 || code === 13) {
+            return true;
+        }
+    } else {
+        return false;
+    }
+};
 
 // —————————————————————————————————————————————————————
 // is touch device
@@ -104,20 +117,37 @@ function is_touch_device() {
     document.addEventListener('keydown', keyboardFocus, false);
 })();
 
+function accordion() {
+    let expanderContainer = document.querySelectorAll(".expander");
+    if (expanderContainer) {
+        $(".expander").on("click keypress", function (event) {
+            if (a11yClick(event) === true) {
+                $(this).find(".expander__content").toggleClass("visible");
+            }
+        });
+    }
+}
+
 // Remember to minimize this file before putting into production site
 
 
 
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function (event) {
+    accordion();
+
     // —————————————————————————————————————————
     // L O C O M O T I V E
     // —————————————————————————————————————————
-    scroll = new LocomotiveScroll({
+    const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
         smoothMobile: true
     });
-    scroll.init();
+    scroll.destroy()
+
+    setTimeout(function(){
+        scroll.init()
+    }, 100);
 
     // —————————————————————————————————————————————————————
     // scroll events 
@@ -176,8 +206,6 @@ $(document).ready(function () {
 
         checkPagePosition();
     });
-
-
 
 
     // —————————————————————————————————————————————————————
@@ -259,7 +287,8 @@ $(document).ready(function () {
         closeNav();
     });
 
+}); // end dom content loaded
 
-
-
-}); // end document.ready
+window.addEventListener("load", function () {
+    window.dispatchEvent(new Event('resize'));
+});
