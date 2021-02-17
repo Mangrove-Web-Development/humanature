@@ -300,6 +300,16 @@ iframe {
 }
 
 // ————————————————————————————————————————— 
+// Parallax Classes
+// —————————————————————————————————————————
+.lax-container {
+    overflow: hidden;
+    .lax-container__object {
+        transform: scale(1.1);
+    }
+}
+
+// ————————————————————————————————————————— 
 // Layers
 // —————————————————————————————————————————
 .home-hero {
@@ -325,7 +335,7 @@ iframe {
     .home-hero__background {
         @include background-fill();
         width: 100vw;
-        height: 110vh;
+        height: 120vh;
         position: absolute;
         left: 0;
         top: -1vh;
