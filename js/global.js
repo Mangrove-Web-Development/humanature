@@ -157,9 +157,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // —————————————————————————————————————————
         // Home logo color change
         // —————————————————————————————————————————
-        let pageHeight = window.innerHeight - 240;
+        let pageHeight = window.innerHeight - 40;
+        let scrollPosition = scroll.scroll.instance.scroll.y;
 
-        if (position.scroll.y > pageHeight) {
+        if (scrollPosition > pageHeight) {
             gsap.to(".dark-header", {
                 opacity: 1,
                 duration: 0,
@@ -170,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 duration: 0,
                 display: "none"
             });
-        } else if (position.scroll.y < pageHeight) {
+        } else if (scrollPosition < pageHeight) {
             gsap.to(".dark-header", {
                 opacity: 0,
                 duration: 0,
@@ -186,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // —————————————————————————————————————————
         // Navigation active class change
         // —————————————————————————————————————————   
-        let scrollInterval = Math.round(position.scroll.y % 100);
+        let scrollInterval = Math.round(scrollPosition % 100);
 
         if (scrollInterval == 0) {
             $('section').each(function () {
