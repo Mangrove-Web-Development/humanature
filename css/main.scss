@@ -180,7 +180,7 @@ $f24: 240%;
             width: 80px;
             display: block;
             border-radius: 60px;
-            transition: .02s all $easing;
+            transition: .5s all cubic-bezier(.19,1,.22,1);
         }
     }
 }
