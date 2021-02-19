@@ -210,12 +210,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         let clickedLink = $(this);
 
-        // smooth scroll to place
         setTimeout(function() {
             let clickedSection = clickedLink[0].hash;
             let clickedSectionNode = $(clickedSection);
             let clickedNode = clickedSectionNode[0];
-            console.log(clickedNode);
 
             // smooth scroll to the anchor id
             scroll.scrollTo(clickedNode, 
