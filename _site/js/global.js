@@ -201,13 +201,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // —————————————————————————————————————————————————————
     checkPagePosition();
 
-    $('.main-nav__link').click(function () {
+    $('.main-nav__link').click(function (event) {
+        event.preventDefault();
+
         // proper classes
         $('.main-nav__link').removeClass('active');
         $(this).addClass('active');
 
+        let clickedLink = $(this);
+
+        // smooth scroll to place
+        setTimeout(function() {
+            let clickedSection = clickedLink[0].hash;
+            let clickedSectionNode = $(clickedSection);
+            let clickedNode = clickedSectionNode[0];
+            console.log(clickedNode);
+
+            // smooth scroll to the anchor id
+            scroll.scrollTo(clickedNode, 
+                options = {offset: -150}
+            );
+
+        }, 100);
+
         checkPagePosition();
     });
+
+    
 
 
     // —————————————————————————————————————————————————————
@@ -241,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         cellSelector: '.work__slider__cell',
         contain: false,
         initialIndex: 2,
-        wrapAround: true,
+        wrapAround: false,
         adaptiveHeight: true,
         percentPosition: false,
         prevNextButtons: false,
