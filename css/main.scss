@@ -449,12 +449,9 @@ iframe {
         }
 
         .expander__content {
-            display: none;
             margin-top: 10px;
-
-            &.visible {
-                display: block;
-            }
+            height: 0;
+            overflow: hidden;
         }
     }
 }
