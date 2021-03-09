@@ -55,9 +55,13 @@ collections:
     output: false
     _hide_content: true
     sort_by: order
-  posts:
-    output: false
-    _hide_content: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      _hide_content: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
