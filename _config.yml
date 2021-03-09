@@ -57,7 +57,7 @@ collections:
   services:
     output: false
     _hide_content: true
-    # sort_by:  
+    sort_by: order
 
 defaults:
   - scope:
