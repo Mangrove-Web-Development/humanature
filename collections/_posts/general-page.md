@@ -1,0 +1,81 @@
+---
+layout: post
+published: false
+title: General Test Post
+permalink: /post
+page_blocks__general: []
+_array_structures:
+  # —————————————————————————————————————
+  # Reusable Elements
+  # —————————————————————————————————————
+  images:
+    label: Image
+    icon: image
+    value:
+      image:
+      alt_text:
+
+  # —————————————————————————————————————
+  # Page Blocks (Layers)
+  # —————————————————————————————————————
+  page_blocks__general:
+    # ———
+    # Indented Dot Heading
+    # ———
+    - label: Dot Indented Heading
+      icon: short_text
+      value:
+        _id: dot_heading # use file name w/ underscores
+        text_size_number: 1
+        text:
+    # ———
+    # Three Column Text
+    # ———
+    - label: Three Column 
+      icon: view_column
+      value:
+        _id: three_column # use file name w/ underscores
+        add_line: true
+        heading_h2:
+        col_one_html:
+        col_two_html:
+    # ———
+    # Boxed Three Column
+    # ———
+    - label: Boxed Three Column 
+      icon: view_column
+      value:
+        _id: boxed_three_column # use file name w/ underscores
+        heading_1:
+        content_1_html:
+        heading_2: 
+        content_2_html:
+        heading_3: 
+        content_3_html:
+    # ———
+    # Single Image
+    # ———
+    - label: Single Image
+      icon: image
+      value:
+        _id: single_image # use file name w/ underscores
+        image:
+        alt_text:
+        caption:
+    # ———
+    # Image Grid
+    # ———
+    - label: Image Grid
+      icon: image
+      value:
+        _id: image_grid # use file name w/ underscores
+        images: []
+    # ———
+    # Insert Content
+    # ———
+    - label: Image Grid
+      icon: playlist_add
+      value:
+        _id: insert_content # use file name w/ underscores
+---
+

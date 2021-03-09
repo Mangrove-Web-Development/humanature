@@ -54,23 +54,18 @@ _comments:
 
 # Collections (Custom Post Types)
 collections:
-  general_pages:
-    output: true
+  services:
+    output: false
     _hide_content: true
-    permalink: /:name
-    # sort_by:   
+    # sort_by:  
 
 defaults:
   - scope:
       path: ""
       type: "posts"
-    values:
-      layout: "post"
   - scope:
       path: ""
-      type: "general_pages"
-    values:
-      layout: "default"
+      type: "services"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
