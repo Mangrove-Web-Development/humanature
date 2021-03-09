@@ -3,10 +3,10 @@ title: Home
 hero_image: /images/placeholder.jpg
 contact_image: /images/placeholder.jpg
 clients: 
-    - logo: /images/humanature-logo-red.svg
+    - logo_image: /images/humanature-logo-red.svg
       alt_text: Humanature Logo
 allies: 
-    - logo: /images/humanature-logo-red.svg
+    - logo_image: /images/humanature-logo-red.svg
       alt_text: Humanature Logo
 ---
 {% include head.html %}
@@ -152,7 +152,7 @@ allies:
             </div>
             <div class="gallery full-width">
                 {% for item in page.clients %}
-                <img src="{{ item.logo }}" alt="{{ item.alt_text }}">
+                <img src="{{ item.logo_image }}" alt="{{ item.alt_text }}">
                 {% endfor %}
             </div>
         </section>
@@ -244,7 +244,7 @@ allies:
                     </p>
                     <div class="gallery full-width">
                         {% for item in page.allies %}
-                        <img src="{{ item.logo }}" alt="{{ item.alt_text }}">
+                        <img src="{{ item.logo_image }}" alt="{{ item.alt_text }}">
                         {% endfor %}
                     </div>
                 </div>
