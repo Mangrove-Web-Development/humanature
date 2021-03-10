@@ -164,11 +164,16 @@ $f24: 240%;
             span {
                 position: relative;
                 z-index: 12;
+                transition: .3s color $easing;
             }
 
             &.active {
                 color: $offWhite;
                 transition: .3s color ease-in;
+            }
+
+            &:hover:not(.active) span {
+                color: $red;
             }
         }
 
@@ -458,6 +463,12 @@ iframe {
                 position: absolute;
                 right: 0;
             }
+
+            &.open:after {
+                content: "-";
+                font-size: 210%;
+                top: -18px;
+            }
         }
 
         .expander__content {
@@ -472,8 +483,12 @@ iframe {
     .resources__nav {
         margin-top: 0;
 
+        a:hover:not(.active) {
+            color: $red !important;
+        }
         a {
             margin-right: 4px;
+            transition: .3s all $easing;
         }
     }
 
@@ -494,7 +509,7 @@ iframe {
             h4 {
                 @include f60();
                 color: $red;
-                margin-top: -18px;
+                margin-top: -13px;
             }
 
             .button {
@@ -670,8 +685,7 @@ iframe {
     text-decoration: none !important;
     line-height: 1;
     font-size: 220%;
-
-    &:hover {}
+    transition: .3s all $easing;
 }
 
 .red-bg .button--white,
@@ -680,6 +694,17 @@ iframe {
     color: $black2 !important;
     background-color: $white;
 }
+
+.button:hover {
+    background-color: darken($red, 20%);
+}
+
+.red-bg .button--white:hover,
+.button--white:hover,
+.resources__nav a:not(.active):hover {
+    background-color: darken($offWhite, 3%);
+}
+
 
 
 

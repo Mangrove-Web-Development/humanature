@@ -135,6 +135,8 @@ function accordion() {
                     height: clickedHeight,
                     easing: Power4.easeOut,
                 });
+
+                $(this).find(".expander__content").prev('h5').toggleClass("open");
             }
         });
     }
