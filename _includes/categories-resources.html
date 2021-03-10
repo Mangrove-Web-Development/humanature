@@ -1,8 +1,10 @@
 <nav class="full-width resources__nav pv100" aria-label="Resource Categories">
-    <a class="active" href="/resources/">All</a>
+    <a class="{% if page.url == "/resources/" %}active{% endif %}" href="/resources/">All</a>
     {% for category in site.categories %}
     {% assign category_name = category[0] %}
-      <a href="/archive/{{ category_name | slugify }}">{{ category_name | replace: "-", " " }}</a>
+    {% capture category_permalink %}/archive/{{ category_name | slugify }}/{% endcapture %}
+
+      <a class="{% if page.url == category_permalink %}active{% endif %}" href="/archive/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
   {% endfor %}
 </nav>
 
