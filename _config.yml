@@ -41,11 +41,14 @@ paginate_path: "/resources/page:num"
 
 # Archives Plugin Config
 jekyll-archives:
-  enabled: categories
-  layouts:
-      category: archive
+  enabled: all
+  layout: archive
   permalinks: 
-    category: /resources/:name
+    year: '/archive/:year/'
+    month: '/archive/:year-:month/'
+    day: '/archive/:year-:month-:day/'
+    category: '/archive/:name/'
+    tag: '/archive/:name/'
 
 # CloudCannon Options
 _options:

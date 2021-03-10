@@ -2,7 +2,7 @@
     <a class="active" href="/resources/">All</a>
     {% for category in site.categories %}
     {% assign category_name = category[0] %}
-      <a href="/resources/category/{{ category_name | slugify }}">{{ category_name | replace: "-", " " }}</a>
+      <a href="/archive/{{ category_name | slugify }}">{{ category_name | replace: "-", " " }}</a>
   {% endfor %}
 </nav>
 

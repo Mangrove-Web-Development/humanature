@@ -4,15 +4,15 @@
 <div data-scroll-container>
     <main data-barba="container" data-barba-namespace="home">
         <div class="wo">
-            <h1 class="hero-text-block full-width center pv100 editable">Resources <span>Archive</span></h1>
+            <h1 class="hero-text-block full-width center pv100 editable">{{ page.title }} <span>Archive</span></h1>
         </div>
 
         <div id="resources" class="resources pv10">
             <div class="wo">
-				{% include categories-resources.html %}
+                {% include categories-resources.html %}
                 <h3 class="editable col-1-to-3">Most Recent</h3>
             </div>
-			{% for post in page.posts %}
+            {% for post in page.posts %}
 				{% include resource.html %}
 			{% endfor %}
         </div>
