@@ -33,18 +33,19 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 sass:
-  sass_dir: _sass #compressed
-  style: expanded
+  sass_dir: _sass 
+  style: compressed
 collections_dir: collections
-paginate: 10
+paginate: 2
 paginate_path: "/resources/page:num"
 
 # Archives Plugin Config
 jekyll-archives:
-  enabled: all
-  layout: archive
+  enabled: categories
+  layouts:
+      category: archive
   permalinks: 
-    category: '/archive/:name'
+    category: /resources/:name
 
 # CloudCannon Options
 _options:
@@ -54,7 +55,7 @@ _options:
     uploads_dir: "uploads/:title"
 
 #cloudcannon:
-  #data: true
+  data: true
 
 # CloudCannon Field Descriptions
 _comments:

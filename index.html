@@ -264,14 +264,7 @@ allies:
         <section id="resources" class="resources pv170">
             <div class="wo">
                 <h2 class="hero-text-block editable full-width center pv170">Our <span>Resources</span></h2>
-                <nav class="full-width resources__nav pv100" aria-label="Resource Categories">
-                    <a class="active" href="/resources">All</a>
-                    <a href="/resources/presentations">Presentations</a>
-                    <a href="/resources/press-releases">Press releases</a>
-                    <a href="/resources/events">Events</a>
-                    <a href="/resources/books">Books</a>
-                    <a href="/resources/articles">Articles</a>
-                </nav>
+                {% include categories-resources.html %}
                 <h3 class="editable col-1-to-3">Most Recent</h3>
             </div>
             {% for post in site.posts %}

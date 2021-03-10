@@ -1,7 +1,7 @@
 ---
-layout: resources
-title: Resources Archive
-permalink:
+title: Archive
+layout: archive
+permalink: /resources/category
 ---
 
 <!-- This loops through the paginated posts -->
