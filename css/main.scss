@@ -422,6 +422,18 @@ iframe {
             padding-right: 30%;
         }
     }
+    .services__service:nth-of-type(n + 1) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .services__service:nth-of-type(n + 2) {
+        grid-column-start: 5;
+        grid-column-end: 9;
+    }
+    .services__service:nth-of-type(n + 3) {
+        grid-column-start: 9;
+        grid-column-end: 13;
+    }
 }
 
 .expanders {
