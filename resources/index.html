@@ -1,0 +1,30 @@
+---
+layout: resources
+title: Resources Archive
+permalink:
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+	{% include resource.html %}
+{% endfor %}
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<div class="end-links wo pv240 pagination">
+	<h2 class="editable col-1-to-3 m-col-1-to-4 s-col-1-to-5">
+		Still Reading?
+	</h2>
+	<div class="editable col-3-to-13 m-col-4-to-11 s-col-1-to-5">
+		<ul>
+			{% if paginator.previous_page %}
+			<li><a href="{{ paginator.previous_page_path }}" class="pagination__button">Load Previous</a></li>
+			{% endif %}
+
+			{% if paginator.next_page %}
+			<li><a href="{{ paginator.next_page_path }}" class="pagination__button">Load More</a></li>
+			{% endif %}
+		</ul>
+	</div>
+</div>
+{% endif %}

@@ -1,0 +1,31 @@
+{% include head.html %}
+{% include navigation-resources.html %}
+
+<div data-scroll-container>
+    <main data-barba="container" data-barba-namespace="home">
+        <div class="wo">
+            <h1 class="hero-text-block full-width center pv100 editable">Resources <span>Archive</span></h1>
+        </div>
+
+        <div id="resources" class="resources pv10">
+            <div class="wo">
+                <nav class="full-width resources__nav pv100" aria-label="Resource Categories">
+                    <a class="active" href="/resources/">All</a>
+                    <a href="/resources/presentations/">Presentations</a>
+                    <a href="/resources/press-releases/">Press releases</a>
+                    <a href="/resources/events/">Events</a>
+                    <a href="/resources/books/">Books</a>
+                    <a href="/resources/articles/">Articles</a>
+                </nav>
+                <h3 class="editable col-1-to-3">Most Recent</h3>
+            </div>
+            {{ content }}
+            <div class="resources__archives-cta wo-stacked">
+                <button class="button" type="button">Load More ↓</button>
+            </div>
+        </div>
+    </main>
+
+    {% include footer.html %}
+
+</div> <!-- end locomotive scroll -->

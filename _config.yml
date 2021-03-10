@@ -29,10 +29,22 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
 sass:
   sass_dir: _sass #compressed
   style: expanded
 collections_dir: collections
+paginate: 10
+paginate_path: "/resources/page:num"
+
+# Archives Plugin Config
+jekyll-archives:
+  enabled: all
+  layout: archive
+  permalinks: 
+    category: '/archive/:name'
 
 # CloudCannon Options
 _options:
@@ -46,8 +58,8 @@ _options:
 
 # CloudCannon Field Descriptions
 _comments:
-  name: This can get converted to the file name
-  title: This can get converted to the file name
+  title: This gets used for SEO purposes and shows in the browser tab.
+  published: Please check this box to publish the post.
 
 # Collections (Custom Post Types)
 collections:

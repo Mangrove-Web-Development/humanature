@@ -1,23 +1,33 @@
 {% include head.html %}
+{% include navigation-resources.html %}
 
-<main data-barba="container" data-barba-namespace="ideas">
-	<div class="wo page-heading">
-		<h1 class="col-1-to-12">
-			<span>Archives for : </span>
-			<span class="page-heading__dot">{{ page.title }}</span>
-		</h1>
-	</div>
-	{% include blog-filters.html %}
-	<div class="idea-posts">
-	{% for post in page.posts limit: 10 %}
-		<a href="{{ post.url }}" class="idea-posts__post wo-full">
-			<p class="idea-posts__post__date col-1-to-3">{{ post.date | date: "%B %d, %Y" }}</p>
-			<h2 class="col-3-to-10">{{ post.title }}</h2>
-			<p aria-hidden="true" class="link right col-10-to-13" href="{{ post.url }}">Read</p>
-			<div class="background"></div>
-		</a>
-	{% endfor %}
-	</div>
-</main>
+<div data-scroll-container>
+    <main data-barba="container" data-barba-namespace="home">
+        <div class="wo">
+            <h1 class="hero-text-block full-width center pv100 editable">Resources <span>Archive</span></h1>
+        </div>
 
-{% include footer.html %}
+        <div id="resources" class="resources pv10">
+            <div class="wo">
+                <nav class="full-width resources__nav pv100" aria-label="Resource Categories">
+                    <a class="active" href="/resources/">All</a>
+                    <a href="/resources/presentations/">Presentations</a>
+                    <a href="/resources/press-releases/">Press releases</a>
+                    <a href="/resources/events/">Events</a>
+                    <a href="/resources/books/">Books</a>
+                    <a href="/resources/articles/">Articles</a>
+                </nav>
+                <h3 class="editable col-1-to-3">Most Recent</h3>
+            </div>
+			{% for post in page.posts limit: 10 %}
+				{% include resource.html %}
+			{% endfor %}
+            <div class="resources__archives-cta wo-stacked">
+                <button class="button" type="button">Load More ↓</button>
+            </div>
+        </div>
+    </main>
+
+    {% include footer.html %}
+
+</div> <!-- end locomotive scroll -->
