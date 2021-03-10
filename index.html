@@ -257,7 +257,7 @@ allies:
         <section id="services" class="services wo pv170">
             <h2 class="editable full-width">Services</h2>
             {% for item in site.services %}
-                {% include services-inner.html %}
+                {% include services.html %}
             {% endfor %}
         </section>
 
@@ -274,39 +274,9 @@ allies:
                 </nav>
                 <h3 class="editable col-1-to-3">Most Recent</h3>
             </div>
-            <article class="resources__post">
-                <a class="wo" href="">
-                    <div class="background col-1-to-5" style="background-image: url('/images/placeholder-2.jpg');" alt="">
-                    </div>
-                    <h4 class="col-5-to-11">Resource Title Goes Here</h4>
-                    <h5 class="col-5-to-11 bottom">Resource Category</h5>
-                    <div class="button">
-                        <img src="/images/right-arrow.svg" alt="Arrow">
-                    </div>
-                </a>
-            </article>
-            <article class="resources__post">
-                <a class="wo" href="">
-                    <div class="background col-1-to-5" style="background-image: url('/images/placeholder-3.jpg');" alt="">
-                    </div>
-                    <h4 class="col-5-to-11">Resource Title Goes Here</h4>
-                    <h5 class="col-5-to-11 bottom">Resource Category</h5>
-                    <div class="button">
-                        <img src="/images/right-arrow.svg" alt="Arrow">
-                    </div>
-                </a>
-            </article>
-            <article class="resources__post">
-                <a class="wo" href="">
-                    <div class="background col-1-to-5" style="background-image: url('/images/placeholder-4.jpg');" alt="">
-                    </div>
-                    <h4 class="col-5-to-11">Resource Title Goes Here</h4>
-                    <h5 class="col-5-to-11 bottom">Resource Category</h5>
-                    <div class="button">
-                        <img src="/images/right-arrow.svg" alt="Arrow">
-                    </div>
-                </a>
-            </article>
+            {% for post in site.posts %}
+                {% include resource.html %}
+            {% endfor %}
             <div class="resources__archives-cta wo-stacked">
                 <a class="button" href="/resources">Resource Archives</a>
             </div>
