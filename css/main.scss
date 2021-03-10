@@ -531,7 +531,7 @@ iframe {
         margin-top: 330px;
 
         .work__slider__cell {
-            transition: .2s all $easing;
+            transition: 1s all $easing;
             height: 400px;
             bottom: 0;
 
@@ -539,7 +539,7 @@ iframe {
                 margin-bottom: 90px;
                 position: absolute;
                 top: -360px;
-                transition: .3s opacity;
+                transition: 1s all $easing;
             }
 
             .work__slider__cell__subtitle {
@@ -553,6 +553,7 @@ iframe {
             h3 {
                 width: 49%;
                 display: inline-block;
+                transition: 1s all $easing;
             }
 
             img {
