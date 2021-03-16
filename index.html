@@ -2,52 +2,50 @@
 title: Home
 hero_image: /images/placeholder.jpg
 contact_image: /images/placeholder.jpg
-clients: 
-    - logo_image: /images/humanature-logo-red.svg
-      alt_text: Humanature Logo
-allies: 
-    - logo_image: /images/humanature-logo-red.svg
-      alt_text: Humanature Logo
+clients:
+  - logo_image: /images/humanature-logo-red.svg
+    alt_text: Humanature Logo
+  - logo_image: /images/arrows-in.svg
+    alt_text:
+allies:
+  - logo_image: /images/humanature-logo-red.svg
+    alt_text: Humanature Logo
 ---
+
 {% include head.html %}
 {% include navigation-home.html %}
 
 <div data-scroll-container data-scroll-section>
     <main>
         <div class="home-hero">
-            <h1 class="editable">Design for Humanity</h1>
+            <h1 class="editable">
+                Design for Humanity
+            </h1>
             <div data-scroll="" data-scroll-delay="1" data-scroll-speed="2" class="home-hero__background" style="background-image:url({{ page.hero_image }});"></div>
         </div>
 
         <section>
             <div class="wo pv170">
-                <h2 class=" col-1-to-12 editable">Design for Humanity</h2>
+                <h2 class=" col-1-to-12 editable">
+                    Design for Humanity
+                </h2>
                 <h3 class="hero-text-block col-1-to-12 editable">
-                    We are a design strategy firm that works with leaders and their organizations to put
-                    <strong>humans at the center.</strong>
+                    We are a design strategy firm that works with leaders and their organizations to put <strong>humans at the center.</strong>
                 </h3>
             </div>
 
             <div class="wo pv100">
-                <h3 class="editable col-1-to-3">What We're About</h3>
+                <h3 class="editable col-1-to-3">
+                    What We're About
+                </h3>
                 <div class="editable col-7-to-12">
-                    <p>
-                        Our company works with organizations, their employees, and other stakeholders to transform how
-                        they
-                        understand and support human development, interaction, and performance.
-                    </p>
-                    <p>
-                        We develop and share know-how
-                        and tools that enable clients to address their mointractable challenges where inadequate
-                        soft/behavioral skills meet issues of stress, social cognitive bias, and race-equity-and
-                        inclusion
-                        (REI). Organizations can do this because we have seen it and we have helped to make it happen.
-                    </p>
+                    <p>Our company works with organizations, their employees, and other stakeholders to transform how they understand and support human development, interaction, and performance.</p>
+                    <p>We develop and share know-how and tools that enable clients to address their mointractable challenges where inadequate soft/behavioral skills meet issues of stress, social cognitive bias, and race-equity-and inclusion (REI). Organizations can do this because we have seen it and we have helped to make it happen.</p>
                 </div>
             </div>
 
             <div class="wo lax-container">
-                <img class="col-2-to-12 lax-container__object editable" src="/images/placeholder-6.jpg" alt="">
+                <img class="col-2-to-12 lax-container__object editable" src="/images/placeholder-6.jpg" alt="" />
             </div>
         </section>
 
@@ -71,7 +69,7 @@ allies:
                             mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
                         </p>
                     </div>
-                    <img src="/images/PIC2.jpg" alt="">
+                    <img src="/images/PIC2.jpg" alt="" />
                 </div>
                 <div class="work__slider__cell">
                     <div class="work__slider__cell__content">
@@ -87,7 +85,7 @@ allies:
                             mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
                         </p>
                     </div>
-                    <img src="/images/placeholder.jpg" alt="">
+                    <img src="/images/placeholder.jpg" alt="" />
                 </div>
                 <div class="work__slider__cell">
                     <div class="work__slider__cell__content">
@@ -103,7 +101,7 @@ allies:
                             mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
                         </p>
                     </div>
-                    <img src="/images/PIC4.jpg" alt="">
+                    <img src="/images/PIC4.jpg" alt="" />
                 </div>
                 <div class="work__slider__cell">
                     <div class="work__slider__cell__content">
@@ -119,7 +117,7 @@ allies:
                             mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
                         </p>
                     </div>
-                    <img src="/images/PIC3.jpg" alt="">
+                    <img src="/images/PIC3.jpg" alt="" />
                 </div>
                 <div class="work__slider__cell">
                     <div class="work__slider__cell__content">
@@ -135,61 +133,58 @@ allies:
                             mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
                         </p>
                     </div>
-                    <img src="/images/placeholder.jpg" alt="">
+                    <img src="/images/placeholder.jpg" alt="" />
                 </div>
             </div>
         </section>
 
         <section id="clients" class="our-clients wo pv100">
-            <h2 class="editable col-1-to-3">Our Clients</h2>
+            <h2 class="editable col-1-to-3">
+                Our Clients
+            </h2>
             <div class="editable col-7-to-12">
-                <p>
-                    Our clients are in the areas of workforce development, community development, philanthropy, social
-                    impact investing, and public health. We invite you to reimagine how your organization will create
-                    better
-                    and more resilient lives, organizations and communities.
-                </p>
+                <p>Our clients are in the areas of workforce development, community development, philanthropy, social impact investing, and public health. We invite you to reimagine how your organization will create better and more resilient lives, organizations and communities.</p>
             </div>
             <div class="gallery full-width">
                 {% for item in page.clients %}
-                <img src="{{ item.logo_image }}" alt="{{ item.alt_text }}">
+                <img src="{{ item.logo_image }}" alt="{{ item.alt_text }}" />
                 {% endfor %}
             </div>
         </section>
 
         <section id="about">
             <div class="about-us wo pv170">
-                <h2 class="editable pv60 col-1-to-3">About Us</h2>
+                <h2 class="editable pv60 col-1-to-3">
+                    About Us
+                </h2>
                 <div class="about-us__person col-2-to-7">
-                    <img class="editable" src="/images/michael-obryan.jpg" alt="Headshot of Michael O'Bryan in a black tshirt against a grey background.">
-                    <h3 class="editable">Michael O’Bryan</h3>
-                    <h4 class="editable">Founder & CEO</h4>
+                    <img class="editable" src="/images/michael-obryan.jpg" alt="Headshot of Michael O'Bryan in a black tshirt against a grey background." />
+                    <h3 class="editable">
+                        Michael O&rsquo;Bryan
+                    </h3>
+                    <h4 class="editable">
+                        Founder &amp; CEO
+                    </h4>
                     <p class="editable">
-                        Michael O’Bryan is an expert practitioner and budding researcher in the fields of community
-                        development,
-                        organizational culture, and human wellbeing who has spent more than a decade working directly
-                        with
-                        resilient yet underserved populations —including veterans, adults in recovery, returning
-                        citizens,
-                        and
-                        families experiencing homelessness.
+                        Michael O&rsquo;Bryan is an expert practitioner and budding researcher in the fields of community development, organizational culture, and human wellbeing who has spent more than a decade working directly with resilient yet underserved populations &mdash;including veterans, adults in recovery, returning citizens, and families experiencing homelessness.
                     </p>
                     <div class="editable">
-                        <a class="button" href="#">LinkedIn</a>
+                        <p><a class="button" href="#">LinkedIn</a></p>
                     </div>
                 </div>
                 <div class="about-us__person col-7-to-12">
-                    <img class="editable" src="/images/robert-peagler.jpg" alt="Headshot of Robert Peagler in a grey suit against a grey background.">
-                    <h3 class="editable">Robert Peagler</h3>
-                    <h4 class="editable">Lead, Business Strategy & Development</h4>
+                    <img class="editable" src="/images/robert-peagler.jpg" alt="Headshot of Robert Peagler in a grey suit against a grey background." />
+                    <h3 class="editable">
+                        Robert Peagler
+                    </h3>
+                    <h4 class="editable">
+                        Lead, Business Strategy &amp; Development
+                    </h4>
                     <p class="editable">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt rhoncus ante, interdum
-                        tincidunt
-                        nisl pulvinar sit amet. Vestibulum neque nibh, aliquet ut elementum id, vestibulum quis mi. Nunc
-                        vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt rhoncus ante, interdum tincidunt nisl pulvinar sit amet. Vestibulum neque nibh, aliquet ut elementum id, vestibulum quis mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
                     </p>
                     <div class="editable">
-                        <a class="button" href="#">LinkedIn</a>
+                        <p><a class="button" href="#">LinkedIn</a></p>
                     </div>
                 </div>
             </div>
@@ -198,35 +193,28 @@ allies:
                     We <strong><em>have</em></strong> to get this right
                 </h2>
                 <div class="col-7-to-13">
-                    <h3 class="editable">We help you create the conditions for core human attributes to flourish.</h3>
-                    <p class="editable">The results are a more supportive, creative and resilient workforce, authentically engaged and
-                        fully functioning. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 class="editable">
+                        We help you create the conditions for core human attributes to flourish.
+                    </h3>
+                    <p class="editable">
+                        The results are a more supportive, creative and resilient workforce, authentically engaged and fully functioning. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
                 </div>
-                <img class="graphic-layer__graphic full-width" src="/images/a-to-b-graphic.svg" alt="">
+                <img class="graphic-layer__graphic full-width" src="/images/a-to-b-graphic.svg" alt="" />
             </div>
 
             <div class="wo">
-                <h3 class="col-1-to-12 editable">Humanature Methodology</h3>
+                <h3 class="col-1-to-12 editable">
+                    Humanature Methodology
+                </h3>
                 <h4 class="hero-text-block col-1-to-13 editable">
-                    At Humanature, our work is grounded in a methodology that we call <strong>“Design for
-                        Humanity”</strong>.
+                    At Humanature, our work is grounded in a methodology that we call <strong>&ldquo;Design for Humanity&rdquo;</strong>.
                 </h4>
                 <div class="editable pv100 col-1-to-6">
-                    <p>
-                        Our approach is based upon and informed by current social science research. We have established
-                        a
-                        tight yet flexible framework of inquiry, practice and education. Further, the tools that we
-                        deploy
-                        sit at the intersection of human, economic, and ecological resilience.
-                    </p>
+                    <p>Our approach is based upon and informed by current social science research. We have established a tight yet flexible framework of inquiry, practice and education. Further, the tools that we deploy sit at the intersection of human, economic, and ecological resilience.</p>
                 </div>
                 <div class="editable pv100 col-7-to-12">
-                    <p>
-                        We draw on insights from the human sciences to help our clients create the conditions for the
-                        flourishing of core human attributes and behavioral skills. These are the attributes and skills
-                        that
-                        support creativity, resilience, empathy, and meaningful engagement.
-                    </p>
+                    <p>We draw on insights from the human sciences to help our clients create the conditions for the flourishing of core human attributes and behavioral skills. These are the attributes and skills that support creativity, resilience, empathy, and meaningful engagement.</p>
                 </div>
             </div>
             <div>
@@ -239,23 +227,24 @@ allies:
                     </ul>
                 </div>
                 <div class="wo pv100">
-                    <h2 class="editable col-1-to-3">Our Allies</h2>
+                    <h2 class="editable col-1-to-3">
+                        Our Allies
+                    </h2>
                     <p class="editable col-7-to-12">
-                        Our clients are in the areas of workforce development, community development,
-                        philanthropy, social impact investing, and public health. We invite you to reimagine how your
-                        organization
-                        will create better and more resilient lives, organizations and communities.
+                        Our clients are in the areas of workforce development, community development, philanthropy, social impact investing, and public health. We invite you to reimagine how your organization will create better and more resilient lives, organizations and communities.
                     </p>
                     <div class="gallery full-width">
                         {% for item in page.allies %}
-                        <img src="{{ item.logo_image }}" alt="{{ item.alt_text }}">
+                        <img src="{{ item.logo_image }}" alt="{{ item.alt_text }}" />
                         {% endfor %}
                     </div>
                 </div>
-        </section>
+        </div></section>
         
         <section id="services" class="services wo pv170">
-            <h2 class="editable full-width">Services</h2>
+            <h2 class="editable full-width">
+                Services
+            </h2>
             {% for item in site.services %}
                 {% include services.html %}
             {% endfor %}
@@ -263,9 +252,13 @@ allies:
 
         <section id="resources" class="resources pv170">
             <div class="wo">
-                <h2 class="hero-text-block editable full-width center pv170">Our <span>Resources</span></h2>
+                <h2 class="hero-text-block editable full-width center pv170">
+                    Our <span>Resources</span>
+                </h2>
                 {% include categories-resources.html %}
-                <h3 class="editable col-1-to-3">Most Recent</h3>
+                <h3 class="editable col-1-to-3">
+                    Most Recent
+                </h3>
             </div>
             {% for post in site.posts %}
                 {% include resource.html %}
@@ -279,44 +272,40 @@ allies:
             <div class="background col-1-to-6" style="background-image: url({{ page.contact_image }});">
             </div>
             <h2 class="color-change editable col-7-to-13">
-                Contact us today to begin unlocking your team's full
-                <strong>human potential.</strong>
+                Contact us today to begin unlocking your team's full <strong>human potential.</strong>
             </h2>
             <form class="col-7-to-13" method="post" action="/message-sent/">
                 <label for="name" class="half">
                     <span class="sr-only label-wrapper">Name</span>
                     <span class="required sr-only">(required)</span>
-                    <input id="name" name="name" placeholder="Name*" required="" type="text" pattern="(?! )[A-Za-z ]*">
+                    <input id="name" name="name" placeholder="Name*" required="" type="text" pattern="(?! )[A-Za-z ]*" />
                 </label>
                 <label for="organization" class="half">
                     <span class="sr-only label-wrapper">Organization</span>
-                    <input id="organization" name="organization" placeholder="Organization" type="text"
-                        pattern="(?! )[A-Za-z ]*">
+                    <input id="organization" name="organization" placeholder="Organization" type="text" pattern="(?! )[A-Za-z ]*" />
                 </label>
                 <label for="email" class="half">
                     <span class="sr-only label-wrapper">Email Address</span>
                     <span class="required hidden">(required)</span>
-                    <input id="email" name="email" class="" placeholder="Email*" required="" type="email">
+                    <input id="email" name="email" placeholder="Email*" required="" type="email" />
                 </label>
                 <label for="subject" class="half">
                     <span class="sr-only label-wrapper">Subject</span>
                     <span class="required sr-only">(required)</span>
-                    <input id="subject" name="subject" placeholder="Subject*" required="" type="text"
-                        pattern="(?! )[A-Za-z ]*">
+                    <input id="subject" name="subject" placeholder="Subject*" required="" type="text" pattern="(?! )[A-Za-z ]*" />
                 </label>
                 <label for="message" class="full">
                     <span class="sr-only label-wrapper">Message</span>
                     <span class="required sr-only">(required)</span>
-                    <textarea id="message" name="message" required="" placeholder="Message..."
-                        pattern="(?! )[A-Za-z ]*"></textarea>
+                    <textarea id="message" name="message" required="" placeholder="Message..." pattern="(?! )[A-Za-z ]*"></textarea>
                 </label>
 
                 <!-- gotcha/honeypot -->
-                <input type="text" name="_gotcha" style="display: none;">
+                <input type="text" name="_gotcha" style="display: none;" />
 
                 <!-- hidden fields to route the form to us -->
-                <input type="hidden" name="_to" value="support@manoverboard.com">
-                <input type="hidden" name="_subject" value="Website contact form submission.">
+                <input type="hidden" name="_to" value="support@manoverboard.com" />
+                <input type="hidden" name="_subject" value="Website contact form submission." />
 
                 <button class="button button--white" type="submit">
                     Submit →
