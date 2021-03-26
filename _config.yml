@@ -71,6 +71,9 @@ collections:
     output: false
     _hide_content: true
     sort_by: order
+  work:
+    output: false
+    _hide_content: true
 
 defaults:
   - scope:
