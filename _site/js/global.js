@@ -78,21 +78,6 @@ function a11yClick(event) {
 };
 
 // —————————————————————————————————————————————————————
-// is touch device
-// —————————————————————————————————————————————————————
-function is_touch_device() {
-    var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
-    var mq = function (query) {
-        return window.matchMedia(query).matches;
-    }
-    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-        return true;
-    }
-    var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
-    return mq(query);
-}
-
-// —————————————————————————————————————————————————————
 // is keyboard user
 // —————————————————————————————————————————————————————
 (function () {
@@ -143,9 +128,6 @@ function accordion() {
 }
 
 // Remember to minimize this file before putting into production site
-
-
-
 document.addEventListener("DOMContentLoaded", function (event) {
     accordion();
 
@@ -155,7 +137,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
-        smoothMobile: true,
+        smartphone: {
+            smooth: true
+        },
+        tablet: {
+            smooth: true
+        },
+        reloadOnContextChange: true,
         lerp: 0.13
     });
     scroll.destroy()
@@ -167,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // —————————————————————————————————————————————————————
     // scroll events 
     // —————————————————————————————————————————————————————
-    scroll.on('scroll', (position) => {
+    scroll.on('scroll touchmove', (position) => {
         // —————————————————————————————————————————
         // Home logo color change
         // —————————————————————————————————————————
@@ -215,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // —————————————————————————————————————————————————————
     checkPagePosition();
 
-    $('.main-nav__link').click(function (event) {
+    $('.main-nav__link').on('click', function (event) {
         event.preventDefault();
 
         // proper classes

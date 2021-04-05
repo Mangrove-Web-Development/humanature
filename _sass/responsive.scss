@@ -1,12 +1,4 @@
 @media only screen and (max-width: 700px) {
-    .active-indicator {
-        display: none !important;
-    }
-
-    .main-nav nav .main-nav__link.active {
-        color: black !important;
-    }
-
     li, p, a.link, a,
     input, button, textarea {
         font-weight: 500 !important;
