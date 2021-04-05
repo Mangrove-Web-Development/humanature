@@ -17,11 +17,14 @@
     }
 
     .pv100,
-    .pv170 {
+    .pv170,
+    .about-us__person:nth-of-type(even),
+    .services__service {
         margin-top: 50px;
         margin-bottom: 50px;
     }
 
+    .home-hero h1,
     .hero-text-block {
         font-size: 600%;
     }
@@ -43,27 +46,77 @@
         }
     }
 
-    .main-nav nav .main-nav__link {
-        padding: 5px;
+    .main-nav nav {
+        height: 44px;
+        padding: 0 7px;
+        .main-nav__link {
+            padding: 12px 3px;
+        }
     }
 
-    .gallery img {
-        max-height: 60px;
-        max-width: 110px;
+    .home-hero h1 {
         margin: 20px;
+        text-align: center;
+    }
+
+    .gallery {
+        margin-top: 20px 
+        img {
+            max-height: 90px;
+            max-width: 150px;
+            margin: 20px;
+        }
+    }
+
+    .graphic-layer {
+        > div {
+            order: 3;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+        .graphic-layer__graphic--mobile {
+            display: block !important;
+            order: 2;
+        }
     }
 
     .services {
-        .services__service h3 {
-            font-size: 1000%;
-        }
-        .services__service h4, 
-        .services__service p {
-            padding-right: 0;
-        }
+        margin-top: 100px;
         .services__service {
             grid-column-start: 1 !important;
             grid-column-end: 5 !important;
+            display: flex;
+            flex-wrap: wrap;
+            img {
+                padding-right: 0;
+                width: 100%;
+                order: -1;
+                margin-bottom: 20px;
+            }
+            h3 {
+                font-size: 1000%;
+                width: 20%;
+                margin-bottom: 20px;
+            }
+            h4, 
+            p {
+                padding-right: 0;
+                width: 79%;
+                padding-left: 20px;
+            }
+            h4 {
+                margin-top: 30px;
+            }
+            p {
+                margin-left: 20%;
+                margin-top: -40px;
+            }
+            .expanders p {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 0;
+                padding-left: 0;
+            }
         }
     }
 
@@ -77,9 +130,27 @@
             .button {
                 top: auto;
                 bottom: 0;
+                padding: 3px 16px 7px 16px;
+            }
+            h4 {
+                margin-top: -60px;
+            }
+            h5 {
+                margin-bottom: 7px;
             }
         }
-        
+        .resources__archives-cta {
+            text-align: right;
+        }
+    }
+
+    .contact {
+        .background {
+            height: 340px;
+        }
+        form .half {
+            width: 100%;
+        }
     }
 
     .footer {

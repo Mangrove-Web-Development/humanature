@@ -389,6 +389,10 @@ iframe {
     .graphic {
         margin-top: -13vw;
     }
+
+    .graphic-layer__graphic--mobile {
+        display: none;
+    }
 }
 
 .lg-list {
