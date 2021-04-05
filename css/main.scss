@@ -394,6 +394,8 @@ iframe {
 .lg-list {
     ul {
         list-style-type: none !important;
+        margin-left: 0;
+        padding-left: 0;
 
         li {
             font-size: $f60;

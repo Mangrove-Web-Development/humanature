@@ -115,9 +115,19 @@ img[class*="col-"] {
     .wo-full {
         display: grid;
         grid-template-columns: repeat($column-count-s, 1fr);
-        gap: $column-margin + px $column-margin + px;
+        gap: 20px;
         justify-items: stretch;
         align-items: start;
+    }
+
+    .wo,
+    .wo-stacked,
+    .wo-single {
+        margin: 20px;
+    }
+
+    .wo-full {
+        padding: 20px;
     }
 
     .s-hide {
