@@ -3,6 +3,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .active-indicator {
+        display: none;
+    }
+
     li, p, a.link, a,
     input, button, textarea {
         font-weight: 500 !important;
@@ -54,6 +58,17 @@
         }
     }
 
+    .flickity-viewport {
+        height: 470px !important;
+        .work__slider__cell {
+            width: 250px;
+            margin-left: 20px !important;
+            img {
+                padding-right: 0 !important;
+            }
+        }
+    }
+
     .home-hero h1 {
         margin: 20px;
         text-align: center;
@@ -65,6 +80,12 @@
             max-height: 90px;
             max-width: 150px;
             margin: 20px;
+        }
+    }
+
+    .methodology {
+        > div:nth-of-type(2) {
+            margin-top: -50px;
         }
     }
 
