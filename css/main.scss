@@ -15,6 +15,7 @@
     font-weight: 400;
 }
 
+
 // ————————————————————————————————————————— 
 // VARIABLES: for partials
 // ————————————————————————————————————————— 
@@ -55,6 +56,16 @@ $easing: cubic-bezier(0.83, 0, 0.17, 1);
 $f105: 7.7vw;
 $f60: 600%;
 $f24: 240%;
+
+::selection {
+    background:rgba(252, 67, 54, 0.5);
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: rgba(252, 67, 54, 0.5);
+    /* Gecko Browsers */
+}
 
 // ————————————————————————————————————————— 
 // M I X I N S
