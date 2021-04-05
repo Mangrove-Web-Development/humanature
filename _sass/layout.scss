@@ -59,7 +59,8 @@ img[class*="col-"] {
 }
 
 @media only screen and (min-width: 600px) {
-    .l-hide {
+    .l-hide,
+    .d-hide {
         display: none !important;
     }
 
@@ -79,37 +80,29 @@ img[class*="col-"] {
     }
 }
 
-// @media only screen and (min-width: 600px) and (max-width: 1200px) {
-//     // medium
-//     .wo,
-//     .wo-full {
-//         display: grid;
-//         grid-template-columns: repeat($column-count-m, 1fr);
-//         gap: $column-margin + px $column-margin + px;
-//         justify-items: stretch;
-//         align-items: start;
-//     }
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+    // medium
+    .wo,
+    .wo-full {
+        gap: 30px;
+    }
 
-//     .m-hide {
-//         display: none !important;
-//     }
+    .wo,
+    .wo-stacked,
+    .wo-single {
+        margin: 30px;
+    }
 
-//     .full-width {
-//         grid-column-start: 1;
-//         grid-column-end: $column-count-m + 1;
-//     }
+    .wo-full {
+        padding: 30px;
+    }
 
-//     @for $a-m from 1 through ($column-count-m) {
-//         @for $b-m from 1 through ($column-count-m + 1) {
-//             .m-col-#{$a-m}-to-#{$b-m} {
-//                 grid-column-start: $a-m;
-//                 grid-column-end: $b-m;
-//             }
-//         }
-//     }
-// }
+    .m-hide {
+        display: none !important;
+    }
+}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     // small (mobile)
     .wo,
     .wo-full {

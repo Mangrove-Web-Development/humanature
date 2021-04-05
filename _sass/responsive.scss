@@ -1,10 +1,10 @@
-@media only screen and (min-width: 1500px) {
-
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .active-indicator {
-        display: none;
+        display: none !important;
+    }
+
+    .main-nav nav .main-nav__link.active {
+        color: black !important;
     }
 
     li, p, a.link, a,
@@ -45,6 +45,10 @@
 
     .main-header {
         top: 20px;
+        .main-header__home {
+            left: 20px;
+            top: calc(100vh - 100px);
+        }
         .main-header__logo-area img {
             width: 160px;
         }
