@@ -77,10 +77,14 @@ $f24: 240%;
   position: absolute;
   z-index: 123456789;
   background-color: white;
-  top: 0;
+  top: -200px;
   left: 20px;
   border-radius: 0px 0px 5px 5px;
   box-shadow: 0px 0px 24px rgba(0,0,0,0.5);
+  transition: .4s all $easing;
+  &:focus {
+    top: 0;
+  }
 }
 
 // ————————————————————————————————————————— 
