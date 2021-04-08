@@ -1,10 +1,10 @@
 <nav class="full-width resources__nav pv100" aria-label="Resource Categories">
-    <a class="{% if page.url == "/resources/" %}active{% endif %}" href="/resources/">All</a>
+    <a class="button button--white{% if page.url == "/resources/" %}active{% endif %}" href="/resources/" data-text="All"><span>All</span></a>
     {% for category in site.categories %}
     {% assign category_name = category[0] %}
     {% capture category_permalink %}/archive/{{ category_name | slugify }}/{% endcapture %}
 
-      <a class="{% if page.url == category_permalink %}active{% endif %}" href="/archive/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
+      <a class="button button--white{% if page.url == category_permalink %}active{% endif %}" href="/archive/{{ category_name | slugify }}/" data-text="{{ category_name | replace: "-", " " }}"><span>{{ category_name | replace: "-", " " }}</span></a>
   {% endfor %}
 </nav>
 

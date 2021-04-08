@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // —————————————————————————————————————————————————————
     // scroll events 
     // —————————————————————————————————————————————————————
-    scroll.on('scroll touchmove', (position) => {
+    scroll.on('scroll', (position) => {
         // —————————————————————————————————————————
         // Home logo color change
         // —————————————————————————————————————————

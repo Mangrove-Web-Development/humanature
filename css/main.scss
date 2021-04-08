@@ -711,8 +711,9 @@ iframe {
 // buttons
 // —————————————————————————————————————————
 
-.resources__nav a,
+.button--white,
 .button {
+    position: relative;
     margin-top: 20px;
     background-color: $red;
     color: $white;
@@ -724,13 +725,21 @@ iframe {
     line-height: 1;
     font-size: 220%;
     transition: .3s all $easing;
+    /**/
+    overflow: hidden;
+	-webkit-transition: background-color 0.3s;
+	transition: background-color 0.3s;
 }
 
 .red-bg .button--white,
-.button--white,
-.resources__nav a:not(.active) {
+.button--white {
     color: $black2 !important;
     background-color: $white;
+}
+
+.button--white > span,
+.button--white::before {
+    color: $black2 !important;
 }
 
 .button:hover {
@@ -743,22 +752,8 @@ iframe {
     background-color: darken($offWhite, 3%);
 }
 
-/* Nina */
-.button--nina {
-	padding: 0 2em;
-	background: #7986cb;
-	color: #fff;
-	overflow: hidden;
-	-webkit-transition: background-color 0.3s;
-	transition: background-color 0.3s;
-}
-.button--nina.button--inverted {
-	background: #fff;
-	color: #7986cb;
-}
-.button--nina > span {
+.button > span {
 	display: inline-block;
-	padding: 1em 0;
 	opacity: 0;
 	color: #fff;
 	-webkit-transform: translate3d(0, -10px, 0);
@@ -768,11 +763,12 @@ iframe {
 	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
-.button--nina::before {
+.button--white:before,
+.button::before {
 	content: attr(data-text);
 	position: absolute;
-	top: 0;
-	left: 0;
+    top: -12px;
+    left: 15px;
 	width: 100%;
 	height: 100%;
 	padding: 1em 0;
@@ -781,56 +777,53 @@ iframe {
 	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
-.button--nina:hover {
-	background-color: #3f51b5;
-}
-.button--nina:hover::before {
+.button:hover::before {
 	opacity: 0;
 	-webkit-transform: translate3d(0, 100%, 0);
 	transform: translate3d(0, 100%, 0);
 }
-.button--nina:hover > span {
+.button:hover > span {
 	opacity: 1;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 }
-.button--nina:hover > span:nth-child(1) {
+.button:hover > span:nth-child(1) {
 	-webkit-transition-delay: 0.045s;
 	transition-delay: 0.045s;
 }
-.button--nina:hover > span:nth-child(2) {
+.button:hover > span:nth-child(2) {
 	-webkit-transition-delay: 0.09s;
 	transition-delay: 0.09s;
 }
-.button--nina:hover > span:nth-child(3) {
+.button:hover > span:nth-child(3) {
 	-webkit-transition-delay: 0.135s;
 	transition-delay: 0.135s;
 }
-.button--nina:hover > span:nth-child(4) {
+.button:hover > span:nth-child(4) {
 	-webkit-transition-delay: 0.18s;
 	transition-delay: 0.18s;
 }
-.button--nina:hover > span:nth-child(5) {
+.button:hover > span:nth-child(5) {
 	-webkit-transition-delay: 0.225s;
 	transition-delay: 0.225s;
 }
-.button--nina:hover > span:nth-child(6) {
+.button:hover > span:nth-child(6) {
 	-webkit-transition-delay: 0.27s;
 	transition-delay: 0.27s;
 }
-.button--nina:hover > span:nth-child(7) {
+.button:hover > span:nth-child(7) {
 	-webkit-transition-delay: 0.315s;
 	transition-delay: 0.315s;
 }
-.button--nina:hover > span:nth-child(8) {
+.button:hover > span:nth-child(8) {
 	-webkit-transition-delay: 0.36s;
 	transition-delay: 0.36s;
 }
-.button--nina:hover > span:nth-child(9) {
+.button:hover > span:nth-child(9) {
 	-webkit-transition-delay: 0.405s;
 	transition-delay: 0.405s;
 }
-.button--nina:hover > span:nth-child(10) {
+.button:hover > span:nth-child(10) {
 	-webkit-transition-delay: 0.45s;
 	transition-delay: 0.45s;
 }
