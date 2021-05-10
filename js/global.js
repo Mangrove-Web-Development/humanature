@@ -152,51 +152,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         scroll.init()
     }, 100);
 
-    // —————————————————————————————————————————————————————
-    // scroll events 
-    // —————————————————————————————————————————————————————
-    scroll.on('scroll', (position) => {
-        // —————————————————————————————————————————
-        // Home logo color change
-        // —————————————————————————————————————————
-        let pageHeight = window.innerHeight - 40;
-        let scrollPosition = scroll.scroll.instance.scroll.y;
-
-        if (scrollPosition > pageHeight) {
-            gsap.to(".dark-header", {
-                opacity: 1,
-                duration: 0,
-                display: "inline-block"
-            });
-            gsap.to(".light-header", {
-                opacity: 0,
-                duration: 0,
-                display: "none"
-            });
-        } else if (scrollPosition < pageHeight) {
-            gsap.to(".dark-header", {
-                opacity: 0,
-                duration: 0,
-                display: "none"
-            });
-            gsap.to(".light-header", {
-                opacity: 1,
-                duration: 0,
-                display: "inline-block"
-            });
-        }
-
-        // —————————————————————————————————————————
-        // Navigation active class change
-        // —————————————————————————————————————————   
-        let scrollInterval = Math.round(scrollPosition % 100);
-
-        if (scrollInterval == 0) {
-            $('section').each(function () {
-                checkPagePositionScrolled($(this));
-            });
-        }
-    });
 
     // —————————————————————————————————————————————————————
     // site navigation
@@ -253,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			container: desktopGraphic,
 			path: '/js/a-to-b-desktop.json',
 			renderer: 'svg',
-			loop: true,
+			loop: false,
 			autoplay: true,
 		});
 		
@@ -262,6 +217,61 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		// 		dragCursorLottie.play();
 		// 		handleMouseMove(e);
 		// 	});
+		
+		
+		// —————————————————————————————————————————————————————
+    // scroll events 
+    // —————————————————————————————————————————————————————
+    scroll.on('scroll', (position) => {
+        // —————————————————————————————————————————
+        // Home logo color change
+        // —————————————————————————————————————————
+        let pageHeight = window.innerHeight - 40;
+        let scrollPosition = scroll.scroll.instance.scroll.y;
+
+        if (scrollPosition > pageHeight) {
+            gsap.to(".dark-header", {
+                opacity: 1,
+                duration: 0,
+                display: "inline-block"
+            });
+            gsap.to(".light-header", {
+                opacity: 0,
+                duration: 0,
+                display: "none"
+            });
+        } else if (scrollPosition < pageHeight) {
+            gsap.to(".dark-header", {
+                opacity: 0,
+                duration: 0,
+                display: "none"
+            });
+            gsap.to(".light-header", {
+                opacity: 1,
+                duration: 0,
+                display: "inline-block"
+            });
+        }
+
+        let scrollInterval = Math.round(scrollPosition % 100);
+
+        if (scrollInterval == 0) {
+            // —————————————————————————————————————————
+            // Navigation active class change
+            // —————————————————————————————————————————   
+            $('section').each(function () {
+                checkPagePositionScrolled($(this));
+            });
+            
+            // —————————————————————————————————————————
+            // A to B Graphic
+            // —————————————————————————————————————————  
+            $('.graphic-layer').each(function () {
+              checkPagePositionScrolled($(this));
+            });
+        }
+        
+    });
 
 
 }); // end dom content loaded
