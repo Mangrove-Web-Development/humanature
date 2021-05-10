@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             // —————————————————————————————————————————  
             $('.graphic-layer').each(function () {
                 var topOfObject = $(this).offset().top;
-                var bottomOfWindow = $(window).scrollTop() + window.innerHeight * 2;
+                var bottomOfWindow = $(window).scrollTop() + window.innerHeight;
                 if (bottomOfWindow >= topOfObject) {
                     desktopLottie.play();
                     mobileLottie.play();
