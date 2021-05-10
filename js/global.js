@@ -262,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             });
         }
 
-        let scrollInterval = Math.round(scrollPosition % 50);
+        let scrollInterval = Math.round(scrollPosition % 80);
 
         if (scrollInterval == 0) {
             // —————————————————————————————————————————
