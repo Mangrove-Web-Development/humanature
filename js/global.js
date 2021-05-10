@@ -212,6 +212,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			autoplay: false,
 		});
 		
+    let mobileGraphic = document.querySelector('.graphic-layer__graphic--mobile');
+		var mobileLottie = bodymovin.loadAnimation({
+			container: mobileGraphic,
+			path: '/js/a-to-b-mobile.json',
+			renderer: 'svg',
+			loop: false,
+			autoplay: false,
+		});
+		
 		//  $(".slider").mousemove(function (e) {
 		// 		dragCursorLottie.setDirection(1);
 		// 		dragCursorLottie.play();
@@ -272,6 +281,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 let currentSection = $('.graphic-layer');
                 if (bottomOfWindow >= topOfObject) {
                     desktopLottie.play();
+                    mobileLottie.play();
                 }
             });
         }
