@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			path: '/js/a-to-b-desktop.json',
 			renderer: 'svg',
 			loop: false,
-			autoplay: true,
+			autoplay: false,
 		});
 		
 		//  $(".slider").mousemove(function (e) {
@@ -267,7 +267,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
             // A to B Graphic
             // —————————————————————————————————————————  
             $('.graphic-layer').each(function () {
-              checkPagePositionScrolled($(this));
+                var topOfObject = el.offset().top;
+                var bottomOfWindow = $(window).scrollTop() + window.innerHeight;
+                let currentSection = $('.graphic-layer');
+                if (bottomOfWindow >= topOfObject) {
+                    desktopLottie.play();
+                }
             });
         }
         
