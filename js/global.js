@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             // —————————————————————————————————————————
             // A to B Graphic
             // —————————————————————————————————————————  
-            $('.graphic-layer').each(function () {
+            $('.about-us').each(function () {
                 var topOfObject = $(this).offset().top;
                 var bottomOfWindow = $(window).scrollTop() + window.innerHeight;
                 let currentSection = $('.graphic-layer');
