@@ -242,6 +242,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
         prevNextButtons: false,
         pageDots: false,
     });
+    
+    
+    
+    // —————————————————————————————————————————————————————
+    // A to B Lottie
+    // —————————————————————————————————————————————————————
+		// let dragCursor = document.querySelector('.drag-cursor');
+		// var dragCursorLottie = bodymovin.loadAnimation({
+		// 	container: dragCursor,
+		// 	path: '/js/drag.json',
+		// 	renderer: 'svg',
+		// 	loop: false,
+		// 	autoplay: false,
+		// });
+		
+		// 			$(".slider").mousemove(function (e) {
+		// 		dragCursorLottie.setDirection(1);
+		// 		dragCursorLottie.play();
+		// 		handleMouseMove(e);
+		// 	});
 
 
 }); // end dom content loaded
