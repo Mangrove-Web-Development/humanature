@@ -275,10 +275,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             // —————————————————————————————————————————
             // A to B Graphic
             // —————————————————————————————————————————  
-            $('.about-us').each(function () {
+            $('.graphic-layer').each(function () {
                 var topOfObject = $(this).offset().top;
-                var bottomOfWindow = $(window).scrollTop() + window.innerHeight;
-                let currentSection = $('.graphic-layer');
+                var bottomOfWindow = $(window).scrollTop();
                 if (bottomOfWindow >= topOfObject) {
                     desktopLottie.play();
                     mobileLottie.play();
