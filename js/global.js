@@ -248,16 +248,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // —————————————————————————————————————————————————————
     // A to B Lottie
     // —————————————————————————————————————————————————————
-		// let dragCursor = document.querySelector('.drag-cursor');
-		// var dragCursorLottie = bodymovin.loadAnimation({
-		// 	container: dragCursor,
-		// 	path: '/js/drag.json',
-		// 	renderer: 'svg',
-		// 	loop: false,
-		// 	autoplay: false,
-		// });
+		let desktopGraphic = document.querySelector('.graphic-layer__graphic--dekstop');
+		var desktopLottie = bodymovin.loadAnimation({
+			container: desktopGraphic,
+			path: '/js/a-to-b-desktop.json',
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+		});
 		
-		// 			$(".slider").mousemove(function (e) {
+		//  $(".slider").mousemove(function (e) {
 		// 		dragCursorLottie.setDirection(1);
 		// 		dragCursorLottie.play();
 		// 		handleMouseMove(e);
