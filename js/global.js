@@ -131,38 +131,6 @@ function accordion() {
 document.addEventListener("DOMContentLoaded", function (event) {
     accordion();
 
-
-    // —————————————————————————————————————————————————————
-    // site navigation
-    // —————————————————————————————————————————————————————
-    checkPagePosition();
-
-    $('.main-nav__link').on('click', function (event) {
-        event.preventDefault();
-
-        // proper classes
-        $('.main-nav__link').removeClass('active');
-        $(this).addClass('active');
-
-        let clickedLink = $(this);
-
-        setTimeout(function () {
-            let clickedSection = clickedLink[0].hash;
-            let clickedSectionNode = $(clickedSection);
-            let clickedNode = clickedSectionNode[0];
-
-            // smooth scroll to the anchor id
-            scroll.scrollTo(clickedNode,
-                options = { offset: -150 }
-            );
-
-        }, 100);
-
-        checkPagePosition();
-    });
-
-
-
     // —————————————————————————————————————————————————————
     // work slider
     // —————————————————————————————————————————————————————
@@ -177,14 +145,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         pageDots: false,
     });
 
-
-
-
-
-
-
-
-
 }); // end dom content loaded
 
 window.addEventListener("load", function () {
@@ -195,6 +155,35 @@ if (window.inEditorMode) {
     // do not load locomotive scroll and other scroll events
 } else {
     document.addEventListener("DOMContentLoaded", function (event) {
+        // —————————————————————————————————————————————————————
+        // site navigation
+        // —————————————————————————————————————————————————————
+        checkPagePosition();
+
+        $('.main-nav__link').on('click', function (event) {
+            event.preventDefault();
+
+            // proper classes
+            $('.main-nav__link').removeClass('active');
+            $(this).addClass('active');
+
+            let clickedLink = $(this);
+
+            setTimeout(function () {
+                let clickedSection = clickedLink[0].hash;
+                let clickedSectionNode = $(clickedSection);
+                let clickedNode = clickedSectionNode[0];
+
+                // smooth scroll to the anchor id
+                scroll.scrollTo(clickedNode,
+                    options = { offset: -150 }
+                );
+
+            }, 100);
+
+            checkPagePosition();
+        });
+
         // —————————————————————————————————————————
         // L O C O M O T I V E
         // —————————————————————————————————————————
