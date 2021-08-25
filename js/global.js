@@ -179,32 +179,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-    // —————————————————————————————————————————————————————
-    // A to B Lottie
-    // —————————————————————————————————————————————————————
-    let desktopGraphic = document.querySelector('.graphic-layer__graphic--dekstop');
-    var desktopLottie = bodymovin.loadAnimation({
-        container: desktopGraphic,
-        path: '/js/a-to-b-desktop.json',
-        renderer: 'svg',
-        loop: false,
-        autoplay: false,
-    });
 
-    let mobileGraphic = document.querySelector('.graphic-layer__graphic--mobile');
-    var mobileLottie = bodymovin.loadAnimation({
-        container: mobileGraphic,
-        path: '/js/a-to-b-mobile.json',
-        renderer: 'svg',
-        loop: false,
-        autoplay: false,
-    });
-
-    //  $(".slider").mousemove(function (e) {
-    // 		dragCursorLottie.setDirection(1);
-    // 		dragCursorLottie.play();
-    // 		handleMouseMove(e);
-    // 	});
 
 
 
@@ -240,6 +215,33 @@ if (window.inEditorMode) {
         setTimeout(function () {
             scroll.init()
         }, 100);
+
+        // —————————————————————————————————————————————————————
+        // A to B Lottie
+        // —————————————————————————————————————————————————————
+        let desktopGraphic = document.querySelector('.graphic-layer__graphic--dekstop');
+        var desktopLottie = bodymovin.loadAnimation({
+            container: desktopGraphic,
+            path: '/js/a-to-b-desktop.json',
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+        });
+
+        let mobileGraphic = document.querySelector('.graphic-layer__graphic--mobile');
+        var mobileLottie = bodymovin.loadAnimation({
+            container: mobileGraphic,
+            path: '/js/a-to-b-mobile.json',
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+        });
+
+        //  $(".slider").mousemove(function (e) {
+        // 		dragCursorLottie.setDirection(1);
+        // 		dragCursorLottie.play();
+        // 		handleMouseMove(e);
+        // 	});
 
         // —————————————————————————————————————————————————————
         // scroll events 
