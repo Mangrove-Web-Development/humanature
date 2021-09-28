@@ -1,6 +1,6 @@
 ---
 published: true
-published_date: 2021-03-01 00:00:00
+published_date: 2021-09-28 00:00:00
 image: /uploads/test-work/empathy-lab-logo-cohort-1.png
 client: Empathy Lab's Professional Learning Community
 year: '2020'
