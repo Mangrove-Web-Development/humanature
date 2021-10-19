@@ -83,86 +83,18 @@ allies:
                 <p class="col-11-to-13 s-col-3-to-5 right">Drag <img src="/images/drag.svg" alt="" /></p>
             </div>
             <div class="work__slider">
+                {% for item in site.work %}
                 <div class="work__slider__cell">
                     <div class="work__slider__cell__content">
-                        <h3>Client</h3>
-                        <h3>Year</h3>
-                        <h3 class="work__slider__cell__subtitle">Project Title</h3>
-                        <p class="work__slider__cell__subtitle">2017</p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt rhoncus ante,
-                            interdum
-                            tincidunt nisl pulvinar sit amet. Vestibulum neque nibh, aliquet ut elementum id, vestibulum
-                            quis
-                            mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
-                        </p>
+                        <h3 aria-hidden="true">Client</h3>
+                        <h3 aria-hidden="true">Year</h3>
+                        <h4 class="work__slider__cell__subtitle">{{ item.client }}</h4>
+                        <h4 class="work__slider__cell__subtitle">{{ item.year }}</h4>
+                        <p>{{ item.description_text }}</p>
                     </div>
-                    <img src="/images/PIC2.jpg" alt="" />
+                    <img src="{{ item.image }}" alt="" />
                 </div>
-                <div class="work__slider__cell">
-                    <div class="work__slider__cell__content">
-                        <h3>Client</h3>
-                        <h3>Year</h3>
-                        <h3 class="work__slider__cell__subtitle">Project Title</h3>
-                        <p class="work__slider__cell__subtitle">2017</p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt rhoncus ante,
-                            interdum
-                            tincidunt nisl pulvinar sit amet. Vestibulum neque nibh, aliquet ut elementum id, vestibulum
-                            quis
-                            mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
-                        </p>
-                    </div>
-                    <img src="/images/placeholder.jpg" alt="" />
-                </div>
-                <div class="work__slider__cell">
-                    <div class="work__slider__cell__content">
-                        <h3>Client</h3>
-                        <h3>Year</h3>
-                        <h3 class="work__slider__cell__subtitle">Project Title</h3>
-                        <p class="work__slider__cell__subtitle">2017</p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt rhoncus ante,
-                            interdum
-                            tincidunt nisl pulvinar sit amet. Vestibulum neque nibh, aliquet ut elementum id, vestibulum
-                            quis
-                            mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
-                        </p>
-                    </div>
-                    <img src="/images/PIC4.jpg" alt="" />
-                </div>
-                <div class="work__slider__cell">
-                    <div class="work__slider__cell__content">
-                        <h3>Client</h3>
-                        <h3>Year</h3>
-                        <h3 class="work__slider__cell__subtitle">Project Title</h3>
-                        <p class="work__slider__cell__subtitle">2017</p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt rhoncus ante,
-                            interdum
-                            tincidunt nisl pulvinar sit amet. Vestibulum neque nibh, aliquet ut elementum id, vestibulum
-                            quis
-                            mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
-                        </p>
-                    </div>
-                    <img src="/images/PIC3.jpg" alt="" />
-                </div>
-                <div class="work__slider__cell">
-                    <div class="work__slider__cell__content">
-                        <h3>Client</h3>
-                        <h3>Year</h3>
-                        <h3 class="work__slider__cell__subtitle">Project Title</h3>
-                        <p class="work__slider__cell__subtitle">2017</p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt rhoncus ante,
-                            interdum
-                            tincidunt nisl pulvinar sit amet. Vestibulum neque nibh, aliquet ut elementum id, vestibulum
-                            quis
-                            mi. Nunc vulputate a ligula in venenatis. Aliquam accumsan velit a ligula gravida vulputate.
-                        </p>
-                    </div>
-                    <img src="/images/placeholder.jpg" alt="" />
-                </div>
+                {% endfor %}
             </div>
         </section>
 
