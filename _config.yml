@@ -35,7 +35,7 @@ sass:
   sass_dir: _sass 
   style: compressed
 collections_dir: collections
-paginate: 2
+paginate: 10
 paginate_path: "/resources/page:num"
 
 # Archives Plugin Config
