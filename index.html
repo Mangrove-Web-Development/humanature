@@ -245,7 +245,7 @@ allies:
             <h2 class="color-change editable col-7-to-13 s-col-1-to-5">
                 Contact us today to begin unlocking your team's full <strong>human potential.</strong>
             </h2>
-            <form class="col-7-to-13 s-col-1-to-5" method="post" action="/message-sent/">
+            <form class="col-7-to-13 s-col-1-to-5" method="POST" data-netlify="true" action="/message-sent/">
                 <label for="name" class="half">
                     <span class="sr-only label-wrapper">Name</span>
                     <span class="required sr-only">(required)</span>
@@ -272,11 +272,11 @@ allies:
                 </label>
 
                 <!-- gotcha/honeypot -->
-                <input type="text" name="_gotcha" style="display: none;" />
+                <!--<input type="text" name="_gotcha" style="display: none;" />-->
 
                 <!-- hidden fields to route the form to us -->
-                <input type="hidden" name="_to" value="info@humanature.works" />
-                <input type="hidden" name="_subject" value="Website contact form submission." />
+                <!--<input type="hidden" name="_to" value="info@humanature.works" />-->
+                <!--<input type="hidden" name="_subject" value="Website contact form submission." />-->
 
                 <button class="button button--white" type="submit" data-text="Submit">
                     <span>S</span><span>u</span><span>b</span><span>m</span><span>i</span><span>t</span><span> →</span>
