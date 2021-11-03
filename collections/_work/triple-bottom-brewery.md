@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 published_date: 2021-11-03 00:00:00
 image: /uploads/triple-bottom-brewery-vector.png
 client: Triple Bottom Brewery
