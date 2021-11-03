@@ -203,7 +203,7 @@ if (window.inEditorMode) {
 
         setTimeout(function () {
             scroll.init()
-        }, 100);
+        }, 1000);
 
         // —————————————————————————————————————————————————————
         // A to B Lottie
