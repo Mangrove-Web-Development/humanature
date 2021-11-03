@@ -1,7 +1,5 @@
 --- 
-# MOB 2020 Main Stylesheet # last modified August 18,2020 
---- 
-// this file must start with front matter, like above, so jekyll knows to parse and do shit with it! :D
+---
 
 @font-face {
     font-family: "light";
@@ -58,7 +56,7 @@ $f60: 600%;
 $f24: 240%;
 
 ::selection {
-    background:rgba(252, 67, 54, 0.5);
+    background: rgba(252, 67, 54, 0.5);
     /* WebKit/Blink Browsers */
 }
 
@@ -72,19 +70,20 @@ $f24: 240%;
 }
 
 #skipLink {
-  padding: 20px 10px 11px 10px;
-  display: inline-block;
-  position: absolute;
-  z-index: 123456789;
-  background-color: white;
-  top: -200px;
-  left: 20px;
-  border-radius: 0px 0px 5px 5px;
-  box-shadow: 0px 0px 24px rgba(0,0,0,0.5);
-  transition: .4s all $easing;
-  &:focus {
-    top: 0;
-  }
+    padding: 20px 10px 11px 10px;
+    display: inline-block;
+    position: absolute;
+    z-index: 123456789;
+    background-color: white;
+    top: -200px;
+    left: 20px;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5);
+    transition: .4s all $easing;
+
+    &:focus {
+        top: 0;
+    }
 }
 
 // ————————————————————————————————————————— 
@@ -216,7 +215,7 @@ $f24: 240%;
             width: 80px;
             display: block;
             border-radius: 60px;
-            transition: .5s all cubic-bezier(.19,1,.22,1);
+            transition: .5s all cubic-bezier(.19, 1, .22, 1);
         }
     }
 }
@@ -338,6 +337,7 @@ iframe {
 // —————————————————————————————————————————
 .lax-container {
     overflow: hidden;
+
     .lax-container__object {
         transform: scale(1.1);
     }
@@ -464,14 +464,17 @@ iframe {
             padding-right: 30%;
         }
     }
+
     .services__service:nth-of-type(n + 1) {
         grid-column-start: 1;
         grid-column-end: 5;
     }
+
     .services__service:nth-of-type(n + 2) {
         grid-column-start: 5;
         grid-column-end: 9;
     }
+
     .services__service:nth-of-type(n + 3) {
         grid-column-start: 9;
         grid-column-end: 13;
@@ -523,6 +526,7 @@ iframe {
         a:hover:not(.active) {
             color: $red !important;
         }
+
         a {
             margin-right: 4px;
             transition: .3s all $easing;
@@ -543,6 +547,7 @@ iframe {
                 -webkit-backface-visibility: hidden;
                 -webkit-perspective: 1000px;
                 overflow: hidden;
+
                 div {
                     @include background-fill();
                     height: 100%;
@@ -550,6 +555,7 @@ iframe {
                     transition: 1s all cubic-bezier(0, 0.28, 0.5, 1);
                 }
             }
+
             &:hover .background div {
                 transform: scale(1.06);
             }
@@ -560,6 +566,7 @@ iframe {
                 margin-top: -13px;
                 transition: .6s all $easing;
             }
+
             &:hover h4 {
                 color: $black2;
             }
@@ -742,8 +749,8 @@ iframe {
     transition: .3s all $easing;
     /**/
     overflow: hidden;
-	-webkit-transition: background-color 0.3s;
-	transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 .red-bg .button--white,
@@ -752,7 +759,7 @@ iframe {
     background-color: $white;
 }
 
-.button--white > span,
+.button--white>span,
 .button--white::before {
     color: $black2 !important;
 }
@@ -767,80 +774,93 @@ iframe {
     background-color: darken($offWhite, 3%);
 }
 
-.button > span {
-	display: inline-block;
-	opacity: 0;
-	color: #fff;
-	-webkit-transform: translate3d(0, -10px, 0);
-	transform: translate3d(0, -10px, 0);
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+.button>span {
+    display: inline-block;
+    opacity: 0;
+    color: #fff;
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
+
 .button--white:before,
 .button::before {
-	content: attr(data-text);
-	position: absolute;
+    content: attr(data-text);
+    position: absolute;
     top: -12px;
     left: 15px;
-	width: 100%;
-	height: 100%;
-	padding: 1em 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    width: 100%;
+    height: 100%;
+    padding: 1em 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
+
 .button:hover::before {
-	opacity: 0;
-	-webkit-transform: translate3d(0, 100%, 0);
-	transform: translate3d(0, 100%, 0);
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
 }
-.button:hover > span {
-	opacity: 1;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+
+.button:hover>span {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
-.button:hover > span:nth-child(1) {
-	-webkit-transition-delay: 0.045s;
-	transition-delay: 0.045s;
+
+.button:hover>span:nth-child(1) {
+    -webkit-transition-delay: 0.045s;
+    transition-delay: 0.045s;
 }
-.button:hover > span:nth-child(2) {
-	-webkit-transition-delay: 0.09s;
-	transition-delay: 0.09s;
+
+.button:hover>span:nth-child(2) {
+    -webkit-transition-delay: 0.09s;
+    transition-delay: 0.09s;
 }
-.button:hover > span:nth-child(3) {
-	-webkit-transition-delay: 0.135s;
-	transition-delay: 0.135s;
+
+.button:hover>span:nth-child(3) {
+    -webkit-transition-delay: 0.135s;
+    transition-delay: 0.135s;
 }
-.button:hover > span:nth-child(4) {
-	-webkit-transition-delay: 0.18s;
-	transition-delay: 0.18s;
+
+.button:hover>span:nth-child(4) {
+    -webkit-transition-delay: 0.18s;
+    transition-delay: 0.18s;
 }
-.button:hover > span:nth-child(5) {
-	-webkit-transition-delay: 0.225s;
-	transition-delay: 0.225s;
+
+.button:hover>span:nth-child(5) {
+    -webkit-transition-delay: 0.225s;
+    transition-delay: 0.225s;
 }
-.button:hover > span:nth-child(6) {
-	-webkit-transition-delay: 0.27s;
-	transition-delay: 0.27s;
+
+.button:hover>span:nth-child(6) {
+    -webkit-transition-delay: 0.27s;
+    transition-delay: 0.27s;
 }
-.button:hover > span:nth-child(7) {
-	-webkit-transition-delay: 0.315s;
-	transition-delay: 0.315s;
+
+.button:hover>span:nth-child(7) {
+    -webkit-transition-delay: 0.315s;
+    transition-delay: 0.315s;
 }
-.button:hover > span:nth-child(8) {
-	-webkit-transition-delay: 0.36s;
-	transition-delay: 0.36s;
+
+.button:hover>span:nth-child(8) {
+    -webkit-transition-delay: 0.36s;
+    transition-delay: 0.36s;
 }
-.button:hover > span:nth-child(9) {
-	-webkit-transition-delay: 0.405s;
-	transition-delay: 0.405s;
+
+.button:hover>span:nth-child(9) {
+    -webkit-transition-delay: 0.405s;
+    transition-delay: 0.405s;
 }
-.button:hover > span:nth-child(10) {
-	-webkit-transition-delay: 0.45s;
-	transition-delay: 0.45s;
+
+.button:hover>span:nth-child(10) {
+    -webkit-transition-delay: 0.45s;
+    transition-delay: 0.45s;
 }
 
 
@@ -952,6 +972,7 @@ article a {
 // Smooth Scroll
 // —————————————————————————————————————————
 
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {
     overflow: hidden;
 }
@@ -972,7 +993,6 @@ html.has-scroll-dragging {
 }
 
 [data-scroll-direction="horizontal"] [data-scroll-container] {
-    white-space: nowrap;
     height: 100vh;
     display: inline-block;
     white-space: nowrap;
