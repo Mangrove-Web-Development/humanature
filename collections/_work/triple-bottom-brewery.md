@@ -1,7 +1,7 @@
 ---
 published: false
 published_date: 2021-11-03 00:00:00
-image:
+image: /uploads/triple-bottom-brewing.svg
 client: Triple Bottom Brewery
 year:
 description_text: >
