@@ -1,7 +1,7 @@
 ---
 published: true
 published_date:
-image: /uploads/permit-capital-advisors-logo.png
+image: /uploads/permit-capital-logo.png
 client: Permit Capital Advisors
 year:
 description_text: >
@@ -11,4 +11,5 @@ description_text: >
     used to invest in Black- , brown- , and women-owned firms. Our social-impact
     investing work is ongoing.
 ---
+
 
