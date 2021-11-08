@@ -1,7 +1,7 @@
 ---
 published: true
 published_date:
-image: /uploads/uncf-logo.jpeg
+image: /uploads/uncf-logo-1.jpeg
 client: United Negro College Fund
 year:
 description_text: >
@@ -15,3 +15,5 @@ description_text: >
     elements of belongingness; and how workplaces can take advantage of the
     science of learning.
 ---
+
+
