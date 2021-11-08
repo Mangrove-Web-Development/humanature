@@ -1,7 +1,7 @@
 ---
 published: true
 published_date:
-image: /uploads/permit-capital-logo.png
+image: /uploads/permit-capital-advisor-logo-1.png
 client: Permit Capital Advisors
 year:
 description_text: >
