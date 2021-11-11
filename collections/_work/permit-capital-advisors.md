@@ -1,7 +1,7 @@
 ---
 published: true
 published_date:
-image: /uploads/pca-logo.png
+image: /uploads/permcap-1.gif
 client: Permit Capital Advisors
 year:
 description_text: >
