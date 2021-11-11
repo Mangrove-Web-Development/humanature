@@ -1,7 +1,7 @@
 ---
 published: true
 published_date: 2021-11-03 00:00:00
-image: /uploads/triple-bottom-brewery-vector.png
+image: /uploads/triple-bottom-3.gif
 client: Triple Bottom Brewery
 year:
 description_text: >
@@ -12,4 +12,5 @@ description_text: >
     formerly homeless individuals. TBB’s workforce is 50 percent people of color
     and 50 percent women within an industry that’s dominated by white men. 
 ---
+
 
