@@ -1,7 +1,7 @@
 ---
 published: true
 published_date: 2021-11-03 00:00:00
-image: /uploads/triple-bottom-line-brewery-12202021.png
+image: /uploads/triple-bottom-3-1.gif
 client: Triple Bottom Brewery
 year:
 description_text: >
