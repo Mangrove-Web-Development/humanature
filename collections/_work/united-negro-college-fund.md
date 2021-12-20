@@ -1,7 +1,7 @@
 ---
 published: true
 published_date:
-image: /uploads/uncf.svg
+image: /uploads/uncf-1.svg
 client: United Negro College Fund
 year:
 description_text: >
