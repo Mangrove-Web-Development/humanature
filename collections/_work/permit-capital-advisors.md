@@ -1,7 +1,7 @@
 ---
 published: true
 published_date:
-image: /uploads/humanature6.png
+image: /uploads/humanature6-1.png
 client: Permit Capital Advisors
 year:
 description_text: >
