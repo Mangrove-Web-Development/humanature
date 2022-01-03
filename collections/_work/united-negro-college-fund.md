@@ -10,7 +10,8 @@ description_text: >-
     communities such as first-generation college students, individuals
     experiencing homelessness, disconnected youth, and adults in the workforce.
     We deepened UNCF’s knowledge in a number of subject areas related to human
-    potential, and how workplaces can take advantage of the science of learning.
+    potential, and how workplaces can take advantage of the science of
+    learning. 
 ---
 
 
