@@ -1,7 +1,7 @@
 ---
 published: true
 published_date:
-image: /uploads/humanature1-2.png
+image: /uploads/humanature1-3.png
 client: United Negro College Fund
 year:
 description_text: >-
