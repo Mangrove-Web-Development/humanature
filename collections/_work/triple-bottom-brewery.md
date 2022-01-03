@@ -1,7 +1,7 @@
 ---
 published: true
 published_date: 2021-11-03 00:00:00
-image: /uploads/humanature2.png
+image: /uploads/humanature2-1.png
 client: Triple Bottom Brewery
 year:
 description_text: >
