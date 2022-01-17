@@ -4,12 +4,11 @@ published_date: 2021-09-27 00:00:00
 image: /uploads/humanature3-1.png
 client: Empathy Lab's Professional Learning Community
 year: '2020'
-description_text: >
-  We facilitated an unprecedented six-month-long professional learning community
-  to drive meaningful change in Philadelphia on the topic of race, social
-  equity, and inclusion (DEI) in the workplace. What was generated during
-  Empathy Lab has since been brought to the local employment ecosystem through
-  key stakeholder participants.
+description_text: >-
+  We led an unprecedented six-month-long professional learning community in
+  Philadelphia that’s driven meaningful change around DEI, REI, and strategic
+  human design in the workplace. Our curriculum offered stakeholder
+  participants, including some of the region’s leading nonprofit and for-profit
+  employers, a chance to collaborate on the future of work in ways that benefit
+  the entire employment ecosystem.  
 ---
-
-
