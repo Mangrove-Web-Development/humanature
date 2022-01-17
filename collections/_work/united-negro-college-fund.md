@@ -5,12 +5,10 @@ image: /uploads/humanature1-3.png
 client: United Negro College Fund
 year:
 description_text: >-
-    We worked on a national effort to guide the institution in an initiative
-    that had the stated goal of producing better outcomes for vulnerable
-    populations. We deepened UNCF’s knowledge in a number of subject areas
-    related to human potential, including how chronic stress and trauma relate
-    to productivity; the psychosocial elements of belongingness; and how
-    workplaces can take advantage of the science of learning.
+    We worked on a national effort to improve UNCF’s outcomes and initiatives
+    targeting vulnerable populations, such as first-generation college students
+    and disconnected youth. We enriched UNCF’s understanding of key subject
+    areas related to human potential, including how chronic stress and trauma
+    relate to productivity, the psychosocial elements of belongingness, and the
+    science of learning.
 ---
-
-
