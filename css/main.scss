@@ -88,6 +88,12 @@ $f24: 240%;
     }
 }
 
+// locomotive scrollbar - always show
+.c-scrollbar {
+  opacity: 1 !important;
+  z-index: 9999999999 ;
+}
+
 // ————————————————————————————————————————— 
 // M I X I N S
 // ————————————————————————————————————————— 
