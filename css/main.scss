@@ -925,11 +925,25 @@ iframe {
         label, fieldset, p{
             font-size: 100%;
         }
+        fieldset{
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
     }
     .content__gdprLegal{
-        a{
+        a,p{
             font-size: 100%;
         }
+    }
+    .subfield{
+        span{
+            padding-left: .5em;
+        }
+    }
+    #mc_embed_signup,
+    #mc_embed_signup_scroll,
+    #mce-responses{
+        padding-top: 0px;
     }
 }
 
