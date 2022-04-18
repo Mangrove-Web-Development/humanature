@@ -909,7 +909,22 @@ iframe {
 // footer
 // —————————————————————————————————————————
 
-#footer {}
+#mc_embed_signup_scroll{
+    .indicates-required,
+    .mc-field-group{
+        font-size: 200%;
+    }
+    .content__gdpr{
+        label, fieldset{
+            font-size: 200%;
+        }
+    }
+    .content__gdprLegal{
+        a{
+            font-size: 100%;
+        }
+    }
+}
 
 // ————————————————————————————————————————— 
 // core styles & classes
