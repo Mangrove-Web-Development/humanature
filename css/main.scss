@@ -917,6 +917,7 @@ iframe {
 // —————————————————————————————————————————
 
 #mc_embed_signup_scroll{
+
     .indicates-required,
     .mc-field-group{
         font-size: 200%;
@@ -960,6 +961,11 @@ iframe {
         padding-bottom: 20px;
         margin-bottom: 25px;
     }
+
+}
+#mc_embed_signup_scroll,
+#mc_embed_signup{
+    padding-top: 0px;
 }
 
 // ————————————————————————————————————————— 
