@@ -942,8 +942,23 @@ iframe {
     }
     #mc_embed_signup,
     #mc_embed_signup_scroll,
-    #mce-responses{
+    #mce-responses,
+    .indicates-required,
+    .optionalParent{
         padding-top: 0px;
+    }
+    p.brandingLogo{
+        height: 50px;
+        margin-top: 35px;
+        display: none;
+    }
+    #mce-EMAIL{
+        width: 100%;
+        font-size: 150%;
+        line-height: 1;
+        border-bottom: 1px solid white;
+        padding-bottom: 20px;
+        margin-bottom: 25px;
     }
 }
 
