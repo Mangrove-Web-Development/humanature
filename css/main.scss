@@ -930,6 +930,7 @@ iframe {
             margin-top: 1em;
             margin-bottom: 1em;
             padding-top: 7px;
+            border: none;
         }
     }
     .content__gdprLegal{
@@ -949,6 +950,9 @@ iframe {
     .optionalParent,
     .mc-field-group{
         padding-top: 0px;
+    }
+    .mc-field-group{
+        padding-top: 1em;
     }
     p.brandingLogo{
         height: 50px;
