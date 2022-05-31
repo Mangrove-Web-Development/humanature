@@ -8,7 +8,7 @@ clients:
   - logo_image: /uploads/mural-arts.svg
     alt_text: Mural Arts Philadelphia
   - logo_image: /uploads/neighbor-works.svg
-    alt_text: NeighborhoodWorks
+    alt_text: Neighborhood Works
   - logo_image: /uploads/federal-reserve-bank.svg
     alt_text: Federal Reserve Bank - Philadelphia
   - logo_image: /uploads/strada.svg
@@ -16,9 +16,9 @@ clients:
   - logo_image: /uploads/triple-bottom-brewing.svg
     alt_text: Triple Bottom Brewing
   - logo_image: /uploads/ideo-org-logo.png
-    alt_text: Ideo Org
+    alt_text: Ideo.Org
   - logo_image: /uploads/lisc-smaller.png
-    alt_text: LISC
+    alt_text: Local Initiatives Support Corporation
   - logo_image: /uploads/new-jersey-community-capital-logo.png
     alt_text: New Jersey Community Capital
   - logo_image: /uploads/permit-capital-advisors-llc-logo-1.png
@@ -26,7 +26,7 @@ clients:
   - logo_image: /uploads/riverfront-north-partnership-logo.png
     alt_text: Riverfront North Partnership
   - logo_image: /uploads/uncf-logo-2.png
-    alt_text: UNCF
+    alt_text: United Negro College Fund
 allies:
   - logo_image: /uploads/lindyinstitute-urbaninnovation.png
     alt_text: Lindy Institute for Urban Innovation
@@ -82,9 +82,9 @@ allies:
                 <div class="work__slider__cell">
                     <div class="work__slider__cell__content">
                         <h3 aria-hidden="true">Client</h3>
-                        <h3 aria-hidden="true">Year</h3>
+                        <h3 aria-hidden="true"></h3><!--Year-->
                         <h4 class="work__slider__cell__subtitle">{{ item.client }}</h4>
-                        <h4 class="work__slider__cell__subtitle">{{ item.year }}</h4>
+                        <h4 class="work__slider__cell__subtitle"></h4><!--{{ item.year }}-->
                         <p>{{ item.description_text }}</p>
                     </div>
                     <img src="{{ item.image }}" alt="" />
@@ -116,7 +116,8 @@ allies:
         </section>
 
         <section id="about">
-            <div class="about-us wo pv170">
+          <!-- remove the styled margin bottom if you ever uncomment the about us section-->
+            <div class="about-us wo pv170" style="margin-bottom: -100px;">
                 <h2 class="editable pv60 col-1-to-3 s-col-1-to-5">
                     <strong>About</strong>
                 </h2>
@@ -269,7 +270,7 @@ allies:
                 <label for="message" class="full">
                     <span class="sr-only label-wrapper">Message</span>
                     <span class="required sr-only">(required)</span>
-                    <textarea id="message" name="message" required="" placeholder="Message..." pattern="(?! )[A-Za-z ]*"></textarea>
+                    <textarea id="message" name="message" required="" placeholder="Message..."></textarea>
                 </label>
 
                 <!-- gotcha/honeypot -->

@@ -211,7 +211,7 @@ if (window.inEditorMode) {
         let desktopGraphic = document.querySelector('.graphic-layer__graphic--dekstop');
         var desktopLottie = bodymovin.loadAnimation({
             container: desktopGraphic,
-            path: '/js/a-to-b-desktop.json',
+            path: '/js/IllustrationHumanature.json', //used to be '/js/a-to-b-desktop.json'
             renderer: 'svg',
             loop: false,
             autoplay: false,
@@ -220,7 +220,7 @@ if (window.inEditorMode) {
         let mobileGraphic = document.querySelector('.graphic-layer__graphic--mobile');
         var mobileLottie = bodymovin.loadAnimation({
             container: mobileGraphic,
-            path: '/js/a-to-b-mobile.json',
+            path: '/js/IllustrationHumanatureMobile.json', //used to be '/js/a-to-b-mobile.json'
             renderer: 'svg',
             loop: false,
             autoplay: false,
