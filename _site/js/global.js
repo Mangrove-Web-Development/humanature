@@ -131,104 +131,6 @@ function accordion() {
 document.addEventListener("DOMContentLoaded", function (event) {
     accordion();
 
-    // —————————————————————————————————————————
-    // L O C O M O T I V E
-    // —————————————————————————————————————————
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-        smartphone: {
-            smooth: true
-        },
-        tablet: {
-            smooth: true
-        },
-        reloadOnContextChange: true,
-        lerp: 0.13
-    });
-    scroll.destroy()
-
-    setTimeout(function(){
-        scroll.init()
-    }, 100);
-
-    // —————————————————————————————————————————————————————
-    // scroll events 
-    // —————————————————————————————————————————————————————
-    scroll.on('scroll', (position) => {
-        // —————————————————————————————————————————
-        // Home logo color change
-        // —————————————————————————————————————————
-        let pageHeight = window.innerHeight - 40;
-        let scrollPosition = scroll.scroll.instance.scroll.y;
-
-        if (scrollPosition > pageHeight) {
-            gsap.to(".dark-header", {
-                opacity: 1,
-                duration: 0,
-                display: "inline-block"
-            });
-            gsap.to(".light-header", {
-                opacity: 0,
-                duration: 0,
-                display: "none"
-            });
-        } else if (scrollPosition < pageHeight) {
-            gsap.to(".dark-header", {
-                opacity: 0,
-                duration: 0,
-                display: "none"
-            });
-            gsap.to(".light-header", {
-                opacity: 1,
-                duration: 0,
-                display: "inline-block"
-            });
-        }
-
-        // —————————————————————————————————————————
-        // Navigation active class change
-        // —————————————————————————————————————————   
-        let scrollInterval = Math.round(scrollPosition % 100);
-
-        if (scrollInterval == 0) {
-            $('section').each(function () {
-                checkPagePositionScrolled($(this));
-            });
-        }
-    });
-
-    // —————————————————————————————————————————————————————
-    // site navigation
-    // —————————————————————————————————————————————————————
-    checkPagePosition();
-
-    $('.main-nav__link').on('click', function (event) {
-        event.preventDefault();
-
-        // proper classes
-        $('.main-nav__link').removeClass('active');
-        $(this).addClass('active');
-
-        let clickedLink = $(this);
-
-        setTimeout(function() {
-            let clickedSection = clickedLink[0].hash;
-            let clickedSectionNode = $(clickedSection);
-            let clickedNode = clickedSectionNode[0];
-
-            // smooth scroll to the anchor id
-            scroll.scrollTo(clickedNode, 
-                options = {offset: -150}
-            );
-
-        }, 100);
-
-        checkPagePosition();
-    });
-
-
-
     // —————————————————————————————————————————————————————
     // work slider
     // —————————————————————————————————————————————————————
@@ -243,9 +145,150 @@ document.addEventListener("DOMContentLoaded", function (event) {
         pageDots: false,
     });
 
-
 }); // end dom content loaded
 
 window.addEventListener("load", function () {
     window.dispatchEvent(new Event('resize'));
 });
+
+if (window.inEditorMode) {
+    // do not load locomotive scroll and other scroll events
+} else {
+    document.addEventListener("DOMContentLoaded", function (event) {
+        // —————————————————————————————————————————————————————
+        // site navigation
+        // —————————————————————————————————————————————————————
+        checkPagePosition();
+
+        $('.main-nav__link').on('click', function (event) {
+            event.preventDefault();
+
+            // proper classes
+            $('.main-nav__link').removeClass('active');
+            $(this).addClass('active');
+
+            let clickedLink = $(this);
+
+            setTimeout(function () {
+                let clickedSection = clickedLink[0].hash;
+                let clickedSectionNode = $(clickedSection);
+                let clickedNode = clickedSectionNode[0];
+
+                // smooth scroll to the anchor id
+                scroll.scrollTo(clickedNode,
+                    options = { offset: -150 }
+                );
+
+            }, 100);
+
+            checkPagePosition();
+        });
+
+        // —————————————————————————————————————————
+        // L O C O M O T I V E
+        // —————————————————————————————————————————
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            smartphone: {
+                smooth: true
+            },
+            tablet: {
+                smooth: true
+            },
+            reloadOnContextChange: true,
+            lerp: 0.13
+        });
+        scroll.destroy()
+
+        setTimeout(function () {
+            scroll.init()
+        }, 1000);
+
+        // —————————————————————————————————————————————————————
+        // A to B Lottie
+        // —————————————————————————————————————————————————————
+        let desktopGraphic = document.querySelector('.graphic-layer__graphic--dekstop');
+        var desktopLottie = bodymovin.loadAnimation({
+            container: desktopGraphic,
+            path: '/js/IllustrationHumanature.json', //used to be '/js/a-to-b-desktop.json'
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+        });
+
+        let mobileGraphic = document.querySelector('.graphic-layer__graphic--mobile');
+        var mobileLottie = bodymovin.loadAnimation({
+            container: mobileGraphic,
+            path: '/js/IllustrationHumanatureMobile.json', //used to be '/js/a-to-b-mobile.json'
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+        });
+
+        //  $(".slider").mousemove(function (e) {
+        // 		dragCursorLottie.setDirection(1);
+        // 		dragCursorLottie.play();
+        // 		handleMouseMove(e);
+        // 	});
+
+        // —————————————————————————————————————————————————————
+        // scroll events 
+        // —————————————————————————————————————————————————————
+        scroll.on('scroll', (position) => {
+            // —————————————————————————————————————————
+            // Home logo color change
+            // —————————————————————————————————————————
+            let pageHeight = window.innerHeight - 40;
+            let scrollPosition = scroll.scroll.instance.scroll.y;
+
+            if (scrollPosition > pageHeight) {
+                gsap.to(".dark-header", {
+                    opacity: 1,
+                    duration: 0,
+                    display: "inline-block"
+                });
+                gsap.to(".light-header", {
+                    opacity: 0,
+                    duration: 0,
+                    display: "none"
+                });
+            } else if (scrollPosition < pageHeight) {
+                gsap.to(".dark-header", {
+                    opacity: 0,
+                    duration: 0,
+                    display: "none"
+                });
+                gsap.to(".light-header", {
+                    opacity: 1,
+                    duration: 0,
+                    display: "inline-block"
+                });
+            }
+
+            let scrollInterval = Math.round(scrollPosition % 80);
+
+            if (scrollInterval == 0) {
+                // —————————————————————————————————————————
+                // Navigation active class change
+                // —————————————————————————————————————————   
+                $('section').each(function () {
+                    checkPagePositionScrolled($(this));
+                });
+
+                // —————————————————————————————————————————
+                // A to B Graphic
+                // —————————————————————————————————————————  
+                $('.graphic-layer').each(function () {
+                    var topOfObject = $(this).offset().top;
+                    var bottomOfWindow = $(window).scrollTop() + window.innerHeight;
+                    if (bottomOfWindow >= topOfObject) {
+                        desktopLottie.play();
+                        mobileLottie.play();
+                    }
+                });
+            }
+
+        });
+    }); // end dom content loaded
+}
