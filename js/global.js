@@ -157,9 +157,6 @@ if (window.inEditorMode) {
 
     document.addEventListener("DOMContentLoaded", function (event) {
 
-            //stop the page scrolling until everything is loaded
-            var element = document.getElementById("section0");
-            element.classList.add("stopScroll");
 
         // —————————————————————————————————————————————————————
         // site navigation
@@ -298,8 +295,8 @@ if (window.inEditorMode) {
 
         });
 
-        // restore scrolling
-        element.classList.remove("stopScroll");
+        // 2022 force ALL ScrollTriggers to recalculate their positions
+        ScrollTrigger.refresh();
 
     }); // end dom content loaded
 
