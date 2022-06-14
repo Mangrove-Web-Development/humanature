@@ -203,7 +203,8 @@ if (window.inEditorMode) {
 
         setTimeout(function () {
             scroll.init()
-        }, 1000);
+        }, 1500);
+        // 2022 edit, longer time to load the init. 1000 -> 1500
 
         // —————————————————————————————————————————————————————
         // A to B Lottie
