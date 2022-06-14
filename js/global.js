@@ -154,6 +154,12 @@ window.addEventListener("load", function () {
 if (window.inEditorMode) {
     // do not load locomotive scroll and other scroll events
 } else {
+
+    $(document).ready(function(){
+        // Don't let scrolling happen until the page loads
+        $(this).scrollTop(0);
+    });
+
     document.addEventListener("DOMContentLoaded", function (event) {
         // —————————————————————————————————————————————————————
         // site navigation
@@ -203,8 +209,8 @@ if (window.inEditorMode) {
 
         setTimeout(function () {
             scroll.init()
-        }, 1500);
-        // 2022 edit, longer time to load the init. 1000 -> 1500
+        }, 1000);
+
 
         // —————————————————————————————————————————————————————
         // A to B Lottie
