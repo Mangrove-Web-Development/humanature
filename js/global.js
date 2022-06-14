@@ -158,10 +158,8 @@ if (window.inEditorMode) {
     document.addEventListener("DOMContentLoaded", function (event) {
 
             //stop the page scrolling until everything is loaded
-            $('html, body').css({
-                overflow: 'hidden',
-                height: '100%'
-            });
+            var element = document.getElementById("section0");
+            element.classList.add("stopScroll");
 
         // —————————————————————————————————————————————————————
         // site navigation
@@ -301,10 +299,7 @@ if (window.inEditorMode) {
         });
 
         // restore scrolling
-        $('html, body').css({
-            overflow: 'auto',
-            height: 'auto'
-        });
+        element.classList.remove("stopScroll");
 
     }); // end dom content loaded
 
