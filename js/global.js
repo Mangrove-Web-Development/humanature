@@ -155,12 +155,14 @@ if (window.inEditorMode) {
     // do not load locomotive scroll and other scroll events
 } else {
 
-    $(document).ready(function(){
-        // Don't let scrolling happen until the page loads
-        $(this).scrollTop(0);
-    });
-
     document.addEventListener("DOMContentLoaded", function (event) {
+
+            //stop the page scrolling until everything is loaded
+            $('html, body').css({
+                overflow: 'hidden',
+                height: '100%'
+            });
+
         // —————————————————————————————————————————————————————
         // site navigation
         // —————————————————————————————————————————————————————
@@ -297,5 +299,13 @@ if (window.inEditorMode) {
             }
 
         });
+
+        // restore scrolling
+        $('html, body').css({
+            overflow: 'auto',
+            height: 'auto'
+        });
+
     }); // end dom content loaded
+
 }
