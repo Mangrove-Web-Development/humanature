@@ -118,6 +118,11 @@ $f24: 240%;
     }
 }
 
+.stop-scrolling {
+  overflow: hidden;
+  height: 100%;
+}
+
 // locomotive scrollbar - always show
 .c-scrollbar {
   opacity: 1 !important;

@@ -206,6 +206,7 @@ if (window.inEditorMode) {
 
         setTimeout(function () {
             scroll.init()
+            $('body').removeClass('stop-scrolling');
         }, 1000);
 
 
