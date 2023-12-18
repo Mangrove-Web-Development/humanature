@@ -309,6 +309,8 @@ li {
 .hero-text-block {
     @include f105();
     color: $red;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .hero-text-block,
