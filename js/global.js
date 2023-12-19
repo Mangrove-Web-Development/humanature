@@ -164,7 +164,7 @@ if (window.inEditorMode) {
         });
         
         $('.back-to-top').on('click', function (event) {
-            let clickedNode = document.getElementById("#contentStart");
+            let clickedNode = document.getElementById("contentStart");
             console.log(clickedNode);
             
             setTimeout(function () {
