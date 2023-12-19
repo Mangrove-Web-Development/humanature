@@ -165,9 +165,9 @@ if (window.inEditorMode) {
         
         $('.back-to-top').on('click', function (event) {
             let clickedNode = document.getElementById("#contentStart");
+            console.log(clickedNode);
             
             setTimeout(function () {
-                clickedNode
                 // smooth scroll to the top of the page
                 scroll.scrollTo(clickedNode);
 
