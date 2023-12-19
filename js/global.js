@@ -161,6 +161,18 @@ if (window.inEditorMode) {
 
             checkPagePosition();
         });
+        
+        $('.back-to-top).on('click', function (event) {
+            let clickedNode = document.getElementByID("#contentStart");
+            
+            setTimeout(function () {
+                // smooth scroll to the top of the page
+                scroll.scrollTo(clickedNode);
+
+            }, 100);
+
+            checkPagePosition();
+        });
 
         // —————————————————————————————————————————
         // L O C O M O T I V E
