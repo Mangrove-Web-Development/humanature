@@ -162,7 +162,7 @@ if (window.inEditorMode) {
             checkPagePosition();
         });
         
-        $('.back-to-top).on('click', function (event) {
+        $('.back-to-top').on('click', function (event) {
             let clickedNode = document.getElementByID("#contentStart");
             
             setTimeout(function () {
