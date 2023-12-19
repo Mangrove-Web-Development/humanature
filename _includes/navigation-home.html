@@ -9,9 +9,10 @@
     </div>
     <div id="mainNav" class="main-nav" data-scroll-sticky>
         <nav aria-label="Site Menu">
+            <a class="{% if page.url == "#services" %}active{% endif %} main-nav__link services" href="#services"><span>Services</span></a>
             <a class="{% if page.url == "#work" %}active{% endif %} main-nav__link active work" href="#work"><span>Work</span></a>
             <a class="{% if page.url == "#about" %}active{% endif %} main-nav__link about" href="#about"><span>About</span></a>
-            <a class="{% if page.url == "#services" %}active{% endif %} main-nav__link services" href="#services"><span>Services</span></a>
+
             <a class="{% if page.url == "#resources" %}active{% endif %} main-nav__link resources" href="#resources"><span>Resources</span></a>
             <a class="{% if page.url == "#contact" %}active{% endif %} main-nav__link contact" href="#contact"><span>Contact</span></a>
             <div class="active-indicator"></div>
