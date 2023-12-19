@@ -151,6 +151,7 @@ if (window.inEditorMode) {
                 let clickedSection = clickedLink[0].hash;
                 let clickedSectionNode = $(clickedSection);
                 let clickedNode = clickedSectionNode[0];
+                console.log(clickedNode);
 
                 // smooth scroll to the anchor id
                 scroll.scrollTo(clickedNode,
@@ -166,6 +167,7 @@ if (window.inEditorMode) {
             let clickedNode = document.getElementByID("#contentStart");
             
             setTimeout(function () {
+                clickedNode
                 // smooth scroll to the top of the page
                 scroll.scrollTo(clickedNode);
 
