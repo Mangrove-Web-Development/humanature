@@ -154,7 +154,10 @@ window.addEventListener("load", function () {
 if (window.inEditorMode) {
     // do not load locomotive scroll and other scroll events
 } else {
+
     document.addEventListener("DOMContentLoaded", function (event) {
+
+
         // —————————————————————————————————————————————————————
         // site navigation
         // —————————————————————————————————————————————————————
@@ -205,6 +208,7 @@ if (window.inEditorMode) {
             scroll.init()
             $('body').removeClass('stop-scrolling');
         }, 1000);
+
 
         // —————————————————————————————————————————————————————
         // A to B Lottie
@@ -291,5 +295,10 @@ if (window.inEditorMode) {
             }
 
         });
+
+        // 2022 force ALL ScrollTriggers to recalculate their positions
+        ScrollTrigger.refresh();
+
     }); // end dom content loaded
+
 }
