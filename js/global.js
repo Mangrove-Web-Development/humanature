@@ -283,7 +283,7 @@ if (window.inEditorMode) {
         });
 
         // 2022 force ALL ScrollTriggers to recalculate their positions
-        ScrollTrigger.refresh();
+        // ScrollTrigger.refresh();
 
     }); // end dom content loaded
 
