@@ -83,7 +83,6 @@ $red: #FC4336;
 $easing: cubic-bezier(0.83, 0, 0.17, 1);
 
 // font sizes
-$f105: 7.7vw;
 $f60: 600%;
 $f24: 240%;
 
@@ -143,16 +142,6 @@ $f24: 240%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-// font size 105px
-@mixin f105() {
-    font-size: $f105;
-    line-height: 0.9;
-    margin: 0;
-    padding: 0;
-    letter-spacing: -.1vw;
-    font-family: "regular", sans-serif;
 }
 
 // font size 60px
@@ -306,16 +295,26 @@ li {
     font-family: "light", sans-serif !important;
 }
 
-.hero-text-block {
-    @include f105();
+p.p-large {
+    font-family: "light", sans-serif !important;
+    font-size: 240%;
+    line-height: 1.2;
+}
+
+.section-heading {
     color: $red;
     margin-top: 0 !important;
     padding-top: 0 !important;
+    font-size: 7.7vw;
+    line-height: 0.9;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -.1vw;
+    font-family: "regular", sans-serif;
 }
 
-.hero-text-block,
+.section-heading,
 .color-change {
-
     strong,
     span {
         color: $black4 !important;
@@ -401,14 +400,18 @@ iframe {
     h1 {
         position: relative;
         z-index: 1;
-        line-height: .95;
         color: $offWhite;
-        font-size: $f105;
+        font-size: 800%;
         height: 100%;
-        margin: 0;
+        line-height: 0.9;
+        letter-spacing: -.1vw;
+        font-family: "regular", sans-serif;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0;
+        padding: 0 8%;
+        text-align: center;
     }
 
     .home-hero__background {
@@ -479,22 +482,24 @@ iframe {
 //     }
 // }
 
+.site-intro {
+    p {
+        font-family: "regular" !important;
+        @include f60();
+    }
+}
 .services {
     .service-columns {
         display: flex; 
-        gap: $column-margin;
+        gap: $column-margin+px;
 
-        .service-columns__service {    
+        .service-columns__service {  
+            flex: 1; 
+
             h4 {
                 color: $red;
                 @include f24();
-                margin-top: 60px;
                 margin-bottom: 15px;
-            }
-    
-            h4,
-            p {
-                padding-right: 30%;
             }
         }
     }
@@ -606,7 +611,7 @@ iframe {
 
 .work {
     .work__slider {
-        margin-top: 330px;
+        margin-top: 550px;
 
         .work__slider__cell {
             transition: 1s all $easing;
@@ -623,13 +628,11 @@ iframe {
             .work__slider__cell__subtitle {
                 @include f24();
                 color: $red;
-                margin-bottom: 50px;
-                margin-top: 10px;
+                margin: 10px 0;
             }
 
             .work__slider__cell__subtitle,
             h3 {
-                width: 49%;
                 display: inline-block;
                 transition: 1s all $easing;
             }
