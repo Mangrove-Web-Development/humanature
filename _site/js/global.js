@@ -29,31 +29,6 @@ function checkPagePositionScrolled(el) {
     checkPagePosition();
 };
 
-// —————————————————————————————————————————————————————
-// Check browser & and inform user if it is out of date
-// —————————————————————————————————————————————————————
-var $buoop = {
-    required: {
-        e: -6,
-        f: -6,
-        o: -6,
-        s: -4,
-        c: -6
-    },
-    insecure: true,
-    api: 2019.11
-};
-
-function $buo_f() {
-    var e = document.createElement("script");
-    e.src = "//browser-update.org/update.min.js";
-    document.body.appendChild(e);
-};
-try {
-    document.addEventListener("DOMContentLoaded", $buo_f, false)
-} catch (e) {
-    window.attachEvent("onload", $buo_f)
-}
 
 // —————————————————————————————————————————————————————
 // add class to target users with js or no js
@@ -154,7 +129,10 @@ window.addEventListener("load", function () {
 if (window.inEditorMode) {
     // do not load locomotive scroll and other scroll events
 } else {
+
     document.addEventListener("DOMContentLoaded", function (event) {
+
+
         // —————————————————————————————————————————————————————
         // site navigation
         // —————————————————————————————————————————————————————
@@ -183,6 +161,17 @@ if (window.inEditorMode) {
 
             checkPagePosition();
         });
+        
+        $('.back-to-top').on('click', function (event) {
+            let clickedNode = document.getElementById("contentStart");
+            
+            setTimeout(function () {
+                // smooth scroll to the top of the page
+                scroll.scrollTo(clickedNode);
+            }, 100);
+
+            checkPagePosition();
+        });
 
         // —————————————————————————————————————————
         // L O C O M O T I V E
@@ -203,7 +192,9 @@ if (window.inEditorMode) {
 
         setTimeout(function () {
             scroll.init()
+            $('body').removeClass('stop-scrolling');
         }, 1000);
+
 
         // —————————————————————————————————————————————————————
         // A to B Lottie
@@ -290,5 +281,10 @@ if (window.inEditorMode) {
             }
 
         });
+
+        // 2022 force ALL ScrollTriggers to recalculate their positions
+        ScrollTrigger.refresh();
+
     }); // end dom content loaded
+
 }
