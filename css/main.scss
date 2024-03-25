@@ -380,13 +380,13 @@ iframe {
 // ————————————————————————————————————————— 
 // Parallax Classes
 // —————————————————————————————————————————
-.lax-container {
-    overflow: hidden;
+// .lax-container {
+//     overflow: hidden;
 
-    .lax-container__object {
-        transform: scale(1.1);
-    }
-}
+//     .lax-container__object {
+//         transform: scale(1.1);
+//     }
+// }
 
 // ————————————————————————————————————————— 
 // Layers
@@ -424,19 +424,19 @@ iframe {
     }
 }
 
-.gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
+// .gallery {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     margin-top: 50px;
 
-    img {
-        max-height: 100px;
-        max-width: 250px;
-        margin: 35px;
-    }
-}
+//     img {
+//         max-height: 100px;
+//         max-width: 250px;
+//         margin: 35px;
+//     }
+// }
 
 .about-us__person {
     h3 {
@@ -465,19 +465,19 @@ iframe {
     }
 }
 
-.lg-list {
-    ul {
-        list-style-type: none !important;
-        margin-left: 0;
-        padding-left: 0;
+// .lg-list {
+//     ul {
+//         list-style-type: none !important;
+//         margin-left: 0;
+//         padding-left: 0;
 
-        li {
-            font-size: $f60;
-            color: $red;
-            font-family: "regular";
-        }
-    }
-}
+//         li {
+//             font-size: $f60;
+//             color: $red;
+//             font-family: "regular";
+//         }
+//     }
+// }
 
 .services {
     .services__service {
@@ -1055,8 +1055,7 @@ checkbox,
     box-shadow: none;
 }
 
-.pv60,
-.lg-list li {
+.pv60 {
     margin-top: 60px;
     margin-bottom: 60px;
 }
