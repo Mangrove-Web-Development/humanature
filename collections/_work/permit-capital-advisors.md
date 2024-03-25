@@ -3,7 +3,7 @@ published: true
 published_date:
 image: /uploads/humanature6-2.png
 client: Permit Capital Advisors
-category:
+work-category:
 description_text: >-
     We currently consult with PCA to provide a social due diligence process for
     a local impact investing fund with a strong commitment to gender and racial

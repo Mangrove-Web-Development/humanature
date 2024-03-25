@@ -3,7 +3,7 @@ published: true
 published_date:
 image: /uploads/humanature1-3.png
 client: United Negro College Fund
-category:
+work-category:
 description_text: >-
     We led a strategic desgin-team for a national workforce development effort
     of 60+ private sector partners. The team created a framework to improve
