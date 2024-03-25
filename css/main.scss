@@ -480,43 +480,23 @@ iframe {
 // }
 
 .services {
-    .services__service {
-        img {
-            padding-right: 20%;
+    .service-columns {
+        display: flex; 
+        gap: $column-margin;
+
+        .service-columns__service {    
+            h4 {
+                color: $red;
+                @include f24();
+                margin-top: 60px;
+                margin-bottom: 15px;
+            }
+    
+            h4,
+            p {
+                padding-right: 30%;
+            }
         }
-
-        h3 {
-            color: $red;
-            font-size: $f105;
-            margin-bottom: 60px;
-        }
-
-        h4 {
-            color: $red;
-            @include f24();
-            margin-top: 60px;
-            margin-bottom: 15px;
-        }
-
-        h4,
-        p {
-            padding-right: 30%;
-        }
-    }
-
-    .services__service:nth-of-type(n + 1) {
-        grid-column-start: 1;
-        grid-column-end: 5;
-    }
-
-    .services__service:nth-of-type(n + 2) {
-        grid-column-start: 5;
-        grid-column-end: 9;
-    }
-
-    .services__service:nth-of-type(n + 3) {
-        grid-column-start: 9;
-        grid-column-end: 13;
     }
 }
 

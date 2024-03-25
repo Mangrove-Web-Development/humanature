@@ -15,7 +15,7 @@
     .pv100,
     .pv170,
     .about-us__person:nth-of-type(even),
-    .services__service {
+    .service-columns__service {
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -103,9 +103,7 @@
 
     .services {
         margin-top: 100px;
-        .services__service {
-            grid-column-start: 1 !important;
-            grid-column-end: 5 !important;
+        .service-columns__service {
             display: flex;
             flex-wrap: wrap;
             img {
