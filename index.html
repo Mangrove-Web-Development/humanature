@@ -77,9 +77,14 @@ contact_image:
             </div>
 
             <div class="service-columns full-width">
-            {% for item in site.services | sort: "order" %}
+            {% assign sortedServices = site.services | sort:"order" %}
+            {% for item in sortedServices %}
                 {% include services.html %}
             {% endfor %}
+            </div>
+
+            <div class="pv60 center full-width">
+                <a class="button editable" href="/">CTA Text Here</a>
             </div>
 
         </section>
