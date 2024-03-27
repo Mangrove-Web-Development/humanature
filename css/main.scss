@@ -706,6 +706,31 @@ iframe {
             }
         }
     }
+
+    .flickity-prev-next-button {
+        width: 64px;
+        height: 64px;
+        top: -60%;
+
+        .flickity-button-icon {
+            left: 30%;
+            top: 30%;
+            width: 40%;
+            height: 40%;
+
+            path {
+                fill: $red;
+            }
+        }
+
+        &.previous {
+            left: 10%;
+        }
+
+        &.next {
+            right: 10%;
+        }
+    }
 }
 
 .contact {

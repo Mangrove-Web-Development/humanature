@@ -116,8 +116,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         wrapAround: false,
         adaptiveHeight: true,
         percentPosition: false,
-        prevNextButtons: false,
+        prevNextButtons: true,
         pageDots: false,
+        arrowShape: "M100 50V43.5185H23.22L54.72 9.07408L45 0L0 50L45 100L54.72 90.9259L23.22 56.4815H100V50Z",
     });
 
 }); // end dom content loaded
