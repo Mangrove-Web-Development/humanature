@@ -178,4 +178,8 @@
             padding-top: 20px;
         }
     }
+
+    .inneraction-lab.expanders .expander:first-child:after {
+        display: none;
+    }
 }

@@ -78,6 +78,7 @@ $black2: #202020;
 $offWhite: #F9F8F8;
 $white: #FFFFFF;
 $red: #FC4336;
+$blue: #4B40D9;
 
 // easings
 $easing: cubic-bezier(0.83, 0, 0.17, 1);
@@ -458,6 +459,46 @@ iframe {
     }
 }
 
+.inneraction-lab {
+    overflow: visible; 
+
+    &.expanders {
+        position: relative; 
+
+        .expander:first-child:after {
+            content: '';
+            background: url("/_images/inneraction-lab-graphic.svg") no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: -67%;
+            right: -22%;
+            height: 274px;
+            width: 280px;
+        }
+
+        .expander {
+            background-color: $blue;
+        
+            * {
+                color: $white;
+            }
+        }
+    }
+
+    &.wysiwyg {
+        * {
+            font-family: 'Wallop';
+        }
+
+        h2, h3, h4, h5, h6 {
+            color: $blue;
+            font-weight: 600;
+            font-size: 290%;
+            margin: 0 0 1rem 0;
+        }
+    }
+}
+
 .graphic-layer {
     .graphic {
         margin-top: -13vw;
@@ -501,22 +542,30 @@ iframe {
                 @include f24();
                 margin-bottom: 15px;
             }
+
+            .expanders {
+                margin-top: 60px;
+
+                .expander {
+                    background-color: $white;
+
+                    h5 {
+                        font-family: "light", sans-serif;
+                        color: $red;
+                    }
+                }
+            }
         }
     }
 }
 
 .expanders {
-    margin-top: 60px;
-
     .expander {
-        background-color: $white;
         padding: 20px;
         margin-bottom: 2px;
         cursor: pointer;
 
         h5 {
-            font-family: "light", sans-serif;
-            color: $red;
             font-size: 220%;
             line-height: 1;
             position: relative;
