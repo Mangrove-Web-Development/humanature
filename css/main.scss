@@ -462,19 +462,19 @@ iframe {
 .inneraction-lab {
     overflow: visible; 
 
-    &.expanders {
-        position: relative; 
+    &:after {
+        content: '';
+        background: url("/_images/inneraction-lab-graphic.svg") no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 274px;
+        width: 280px;
+    }
 
-        .expander:first-child:after {
-            content: '';
-            background: url("/_images/inneraction-lab-graphic.svg") no-repeat;
-            background-size: contain;
-            position: absolute;
-            top: -67%;
-            right: -22%;
-            height: 274px;
-            width: 280px;
-        }
+    .expanders {
+        position: relative; 
 
         .expander {
             background-color: $blue;
@@ -490,7 +490,7 @@ iframe {
         }
     }
 
-    &.wysiwyg {
+    .wysiwyg {
         * {
             font-family: 'Wallop';
         }
