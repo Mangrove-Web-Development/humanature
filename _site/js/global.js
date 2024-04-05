@@ -83,7 +83,7 @@ function accordion() {
         $(".expander").on("click keypress", function (event) {
             if (a11yClick(event) === true) {
                 $(this).find(".expander__content").toggleClass("visible");
-                let clickedHeight = $(this).find(".expander__content p").height();
+                let clickedHeight = $(this).find(".expander__content__wrapper").height();
 
                 gsap.to($(this).find(".expander__content"), {
                     duration: .5,
