@@ -85,6 +85,7 @@ $easing: cubic-bezier(0.83, 0, 0.17, 1);
 
 // font sizes
 $f60: 600%;
+$f42: 420%;
 $f24: 240%;
 $f22: 220%;
 
@@ -152,6 +153,13 @@ $f22: 220%;
     line-height: 0.95;
     margin: 0;
     padding: 0;
+    letter-spacing: -.02vw;
+    font-family: "regular", sans-serif;
+}
+
+@mixin f42() {
+    font-size: $f42;
+    line-height: 1.2;
     letter-spacing: -.02vw;
     font-family: "regular", sans-serif;
 }
@@ -311,6 +319,7 @@ p.p-large {
     font-family: "light", sans-serif !important;
     font-size: 240%;
     line-height: 1.2;
+    color: #000;
 }
 
 .section-heading {
@@ -503,7 +512,7 @@ iframe {
         
             * {
                 color: $white;
-                font-family: 'Wallop';
+                font-family: 'light';
             }
 
             h5 {
@@ -514,7 +523,7 @@ iframe {
 
     .wysiwyg {
         * {
-            font-family: 'Wallop';
+            font-family: 'regular';
         }
 
         h2, h3, h4, h5, h6 {
@@ -587,6 +596,12 @@ iframe {
             }
         }
     }
+
+    .section-subtitle{
+        @include f42();
+        font-weight: 600;
+        color: $black2;
+    }
 }
 
 .expanders {
@@ -637,7 +652,7 @@ iframe {
     }
 
     .resources__post {
-        a {
+        &__item {
             text-decoration: none;
             height: 23vw;
             margin-bottom: 55px;
@@ -663,11 +678,16 @@ iframe {
                 transform: scale(1.06);
             }
 
-            h4 {
-                @include f60();
-                color: $red;
+            .title-link{
+                display: block;
                 margin-top: -13px;
                 transition: .6s all $easing;
+                text-decoration: none
+            }
+
+            h4{
+                @include f60();
+                color: $red;
             }
 
             &:hover h4 {
@@ -678,6 +698,10 @@ iframe {
                 position: absolute;
                 top: 0;
                 right: 0;
+                height: 43px;
+                width: 43px;
+                display: flex;
+                align-items: center;
             }
         }
     }
@@ -689,6 +713,11 @@ iframe {
 }
 
 .work {
+    .section-intro{
+        p{
+            color: $black2;
+        }
+    }
     .work__slider {
         margin-top: 550px;
 
@@ -1157,6 +1186,23 @@ checkbox,
     margin-bottom: 170px;
 }
 
+.pt100{
+    margin-top: 100px;
+}
+
+.pb100{
+    margin-bottom: 100px;
+}
+
+.pt170{
+    margin-top: 170px;
+}
+
+.pb170{
+    margin-bottom: 170px;
+}
+
+
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
@@ -1299,7 +1345,6 @@ html.has-scroll-dragging {
     right: auto;
     bottom: 0;
 }
-
 
 // —————————————————————————————————————————
 // IMPORTS

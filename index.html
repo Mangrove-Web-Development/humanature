@@ -103,10 +103,10 @@ contact_image:
                 </div>
             </div>
 
-            <h3 class="editable pv100 col-1-to-4 s-col-1-to-5">
-                Additional services
+            <h3 class="color-change editable section-subtitle pt100 col-1-to-12 s-col-1-to-5">
+                Core <strong>services</strong>
             </h3>
-            <div class="editable pv100 col-7-to-13 s-col-1-to-5">
+            <div class="editable pb100 col-1-to-12 s-col-1-to-5">
                 <p>
                     inneraction lab is our top-tier offering, and we recommend it to all prospective clients. But if you have more specific needs, or just aren’t sure the full experience is right for your organization, we also offer the following services a la carte.
                 </p>
@@ -130,7 +130,7 @@ contact_image:
                 <h2 class="section-heading editable col-1-to-12 s-col-1-to-5">
                     Recent <span>Work</span>
                 </h2>
-                <p class="editable p-large col-1-to-6 s-col-1-to-5">Swipe through some of our latest work to get a sense of how we've helped organizations recently. Or give this page a visit for a more in-depth look.                 </p>
+                <p class="editable p-large col-1-to-8 s-col-1-to-5">Swipe through some of our latest work to get a sense of how we've helped organizations recently. Or give this page a visit for a more in-depth look.</p>
             </div>
             <div class="work__slider">
                 {% for item in site.work %}
@@ -148,32 +148,35 @@ contact_image:
 
         <section id="about">
             <div class="about-us wo pv170">
-                <h2 class="editable pv60 col-1-to-3 s-col-1-to-5">
-                    What We Believe
+                <h2 class="color-change editable section-heading col-1-to-12 s-col-1-to-5">
+                    What We <strong>Believe</strong>
                 </h2>
-            </div>
-            <div class="graphic-layer wo pv170">
-                <p class="full-width center section-heading pv100 editable">
-                    We <strong><em>have</em></strong> to get this right
-                </p>
+                <p class="p-large editable col-1-to-6 s-col-1-to-5">Our mission is to put humanity at the heart of every organization— right where it belongs. We imagine a world where
+                leaders and their employees don’t merely make it through each week, but thrive. That’s why we’ve developed and shaped a
+                wide range of processes and tools that empower us to do just that.</p>
                 <div class="col-7-to-13 s-col-1-to-5">
                     <p class="editable">
-                        Our mission is to put humanity at the heart of every organization— right where it belongs. We imagine a world where leaders and their employees don’t merely make it through each week, but thrive. That’s why we’ve developed and shaped a wide range of processes and tools that empower us to do just that.
-                    </p>
-                    <p class="editable">
-                        Using solutions drawn from sources as wide-reaching as the Indigenous world and cognitive neuroscience, we support teams in designing cultures, implementing learning opportunities, and building models of practice that foster an environment of learning and compassionate curiosity.&nbsp;
-                    </p>
-                    <p class="editable">
-                        At Humanature, we believe that equity is a process as much as it is an outcome. We believe all of this knowledge is paramount to how we, as a world, think about human development, belongingness, and the future of society. Most of all, we believe we’ll get it right. We have to.
+                        Using solutions drawn from sources as wide-reaching as the Indigenous world and cognitive neuroscience, we
+                        support teams
+                        in designing cultures, implementing learning opportunities, and building models of practice that foster an
+                        environment
+                        of learning and compassionate curiosity.
+                        At Humanature, we believe that equity is a process as much as it is an outcome. We believe all of this knowledge
+                        is
+                        paramount to how we, as a world, think about human development, belongingness, and the future of society. Most
+                        of all,
+                        we believe we’ll get it right. We have to.
                     </p>
                 </div>
+            </div>
+            <div class="graphic-layer wo pv170">
                 <div class="graphic-layer__graphic--dekstop full-width s-hide"></div>
                 <div class="graphic-layer__graphic--mobile full-width"></div>
             </div>
         </section>
         
         <section id="resources" class="resources pv170">
-            <div class="wo pv170">
+            <div class="wo pt170">
                 <div class="section-intro wo full-width">
                     <h2 class="section-heading editable col-1-to-12 s-col-1-to-5">
                         Our <span>Resources</span>
@@ -183,9 +186,6 @@ contact_image:
                     </p>
                 </div>
                 {% include categories-resources.html %}
-                <h3 class="editable col-1-to-3 s-col-1-to-5">
-                    <strong>Most Recent</strong>
-                </h3>
             </div>
             {% for post in site.posts %}
                 {% include resource.html %}

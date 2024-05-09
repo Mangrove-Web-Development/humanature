@@ -1,12 +1,20 @@
 <article class="resources__post">
-    <a class="wo" href="{{ post.external_link }}">
+    <div class="resources__post__item wo" target="_blank">
         <div class="background col-1-to-5 s-col-1-to-5">
             <div style="background-image: url('{{ post.image }}');"></div>
         </div>
-        <h4 class="col-5-to-11 s-col-1-to-5">{{ post.title }}</h4>
-        <h5 class="col-5-to-11 s-col-1-to-5 bottom">{{ post.categories }} Category</h5>
+        <a href="{{ post.external_link }}" target="_blank" class="title-link col-5-to-11 s-col-1-to-5"><h4>{{ post.title }}</h4></a>
+        <!-- <h5 class="col-5-to-11 s-col-1-to-5 bottom">{{ post.categories }} Category</h5> -->
+        
+        <h5 class="col-5-to-11 s-col-1-to-5 bottom">
+            <a class="" href="/archive/{{ post.categories | first | slugify }}/" data-text="{{ post.categories | first }}">{{post.categories | first }} Category</a>
+
+        </h5>
+
         <div class="button">
-            <img src="/_images/right-arrow.svg" alt="Arrow">
+            <a href="{{ post.external_link }}" target="_blank">
+                <img src="/_images/right-arrow.svg" alt="Arrow">
+            </a>
         </div>
-    </a>
+    </div>
 </article>
