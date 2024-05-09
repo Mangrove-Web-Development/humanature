@@ -444,6 +444,7 @@ iframe {
         justify-content: center;
         margin: 0;
         text-align: left;
+        max-width: 75%;
     }
 
     .home-hero__background {
@@ -566,9 +567,17 @@ iframe {
     p {
         font-family: "light" !important;
         @include f22();
+        max-width: 800px;
+    }
+
+    .wo{
+        gap: 30px 40px;
     }
 }
 .services {
+    .lists{
+        gap: 40px 20px;
+    }
     .service-columns {
         display: flex; 
         gap: $column-margin+px;
@@ -1192,6 +1201,14 @@ checkbox,
 
 .pb100{
     margin-bottom: 100px;
+}
+
+.pt50{
+    margin-top: 50px;
+}
+
+.pb50{
+    margin-bottom: 50px;
 }
 
 .pt170{
