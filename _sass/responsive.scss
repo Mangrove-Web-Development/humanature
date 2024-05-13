@@ -245,6 +245,10 @@
                     margin: 0 !important;
                 }
             }
+
+            &__item{
+                min-height: auto !important;
+            }
         }
         .resources__post a {
             // height: 400px;
