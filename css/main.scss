@@ -574,6 +574,12 @@ iframe {
     .wo{
         gap: 30px 40px;
     }
+
+    .image-container{
+        img{
+            width: 100%;
+        }
+    }
 }
 .services {
     .lists{
@@ -991,6 +997,15 @@ iframe {
 .resources__nav a:not(.active):hover {
     background-color: darken($offWhite, 3%);
 }
+
+.button--blue{
+    background-color: #4B40D9;
+}
+
+.button--blue:hover{
+    background-color: darken(#4B40D9, 20%);
+}
+
 
 .button>span {
     display: inline-block;
