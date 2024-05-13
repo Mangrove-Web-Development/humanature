@@ -449,7 +449,7 @@ iframe {
 
     .home-hero__background {
         @include background-fill();
-        background-position: center;
+        background-position: center bottom;
         width: 100vw;
         height: 120vh;
         position: absolute;
