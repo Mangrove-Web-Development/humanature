@@ -36,15 +36,28 @@
         margin-bottom: 50px;
     }
 
+    .pt170,
+    .pt100 {
+        margin-top: 50px;
+    }
+
+    .pb170,
+    .pb100 {
+        margin-bottom: 50px;
+    }
+
     .pv60 {
         margin-top: 30px;
         margin-bottom: 30px;
     }
 
-    .site-intro p,
     .home-hero h1,
     .hero-text-block {
         font-size: 430%;
+    }
+
+    .site-intro p{
+        font-size: 240%;
     }
 
 
@@ -212,24 +225,30 @@
     }
 
     .resources {
-        .resources__post a {
-            height: 400px;
-            margin-bottom: 20px;
 
-            .background {
-                height: 200px;
+        .background {
+            height: 200px !important;
+            div{
+                background-position: center !important;
             }
+        }
 
+        .resources__post {
             .button {
-                top: auto;
+                top: auto !important;
                 bottom: 0;
+                width: 45px !important;
+                height: 28px !important;
                 padding: 3px 16px 7px 16px;
+                a{
+                    height: 100% !important;
+                    margin: 0 !important;
+                }
             }
-
-            h4 {
-                margin-top: -60px;
-            }
-
+        }
+        .resources__post a {
+            // height: 400px;
+            margin-bottom: 20px;
             h5 {
                 margin-bottom: 7px;
             }

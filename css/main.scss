@@ -143,7 +143,7 @@ $f22: 220%;
 // @include background-fill();
 @mixin background-fill() {
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
     background-size: cover;
 }
 
@@ -453,7 +453,7 @@ iframe {
         height: 120vh;
         position: absolute;
         left: 0;
-        top: -2vh;
+        top: -9vh;
         right: 0;
         bottom: 0;
         opacity: .8;
@@ -663,7 +663,7 @@ iframe {
     .resources__post {
         &__item {
             text-decoration: none;
-            height: 23vw;
+            // height: 23vw;
             margin-bottom: 55px;
             padding-top: 32px;
             border-top: 1px solid rgba(66, 66, 66, 0.1);
