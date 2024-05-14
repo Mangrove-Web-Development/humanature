@@ -60,6 +60,24 @@
         font-size: 240%;
     }
 
+    .site-intro{
+        ul li,
+        ul li p{
+            font-family: "light" !important;
+            font-size: 24px !important;
+            line-height: 1.2;
+            padding: 0;
+            letter-spacing: 0;
+            max-width: 800px;
+        }
+        li{
+            margin: 10px 0;
+            b, strong{
+                font-weight: 600;
+            }
+        }
+    }
+
 
     .lg-list ul li,
     .resources .resources__post a h4 {
