@@ -565,10 +565,20 @@ iframe {
     h2{
         @include f60();
     }
-    p {
+    p,
+    ul li{
         font-family: "light" !important;
-        @include f22();
+        font-size: 22px;
+        line-height: 1.2;
+        padding: 0;
+        letter-spacing: 0;
         max-width: 800px;
+    }
+    li{
+        margin: 10px 0;
+        b, strong{
+            font-weight: 600;
+        }
     }
 
     .wo{
