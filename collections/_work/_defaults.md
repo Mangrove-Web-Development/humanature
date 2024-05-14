@@ -3,6 +3,6 @@ published: false
 published_date:
 image:
 client:
-year:
+work-category:
 description_text:
 ---

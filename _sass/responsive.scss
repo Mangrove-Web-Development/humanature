@@ -1,51 +1,112 @@
+@media only screen and (max-width: 960px) {
+    .home-hero h1{
+        max-width: 100%;
+    }
+}
+
 @media only screen and (max-width: 700px) {
-    li, p, a.link, a,
-    input, button, textarea {
+    .services {
+        .lists{
+            margin-bottom: 60px;
+            gap: 20px 20px;
+        }
+    }
+
+    li,
+    p,
+    a.link,
+    a,
+    input,
+    button,
+    textarea {
         font-weight: 500 !important;
         font-size: 190%;
         line-height: 1.111;
         letter-spacing: 0px;
     }
 
-    h1, h2, h3, h4, h5, h6,
     .main-nav nav .main-nav__link {
         font-size: 140%;
     }
 
     .pv100,
     .pv170,
-    .about-us__person:nth-of-type(even),
-    .services__service {
+    .about-us__person:nth-of-type(even) {
         margin-top: 50px;
         margin-bottom: 50px;
     }
 
+    .pt170,
+    .pt100 {
+        margin-top: 50px;
+    }
+
+    .pb170,
+    .pb100 {
+        margin-bottom: 50px;
+    }
+
+    .pv60 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
     .home-hero h1,
     .hero-text-block {
-        font-size: 600%;
+        font-size: 430%;
     }
+
+    .site-intro p{
+        font-size: 240%;
+    }
+
+    .site-intro{
+        ul li,
+        ul li p{
+            font-family: "light" !important;
+            font-size: 24px !important;
+            line-height: 1.2;
+            padding: 0;
+            letter-spacing: 0;
+            max-width: 800px;
+        }
+        li{
+            margin: 10px 0;
+            b, strong{
+                font-weight: 600;
+            }
+        }
+    }
+
 
     .lg-list ul li,
     .resources .resources__post a h4 {
         font-size: 360%;
     }
 
-    .resources__nav a, .button {
+    .resources__nav a,
+    .button {
         font-size: 180%;
-        // padding: 8px 13px 11px 13px;
+
+        &:before {
+            top: -9px;
+        }
     }
 
     .main-header {
         top: 20px;
+
         .main-header__home {
             left: 20px;
             top: -26px;
         }
+
         .main-header__logo-area img {
             width: 160px;
         }
     }
-    .main-header__home.button{
+
+    .main-header__home.button {
         // too much going on here on small sizes
         display: none;
     }
@@ -53,6 +114,7 @@
     .main-nav nav {
         height: 44px;
         padding: 0 7px;
+
         .main-nav__link {
             padding: 12px 3px;
         }
@@ -60,11 +122,33 @@
 
     .flickity-viewport {
         height: 470px !important;
+    }
+
+    .work {
+        .work__slider {
+            margin-top: 340px;
+        }
+
         .work__slider__cell {
             width: 250px;
             margin-left: 20px !important;
+
             img {
                 padding-right: 0 !important;
+            }
+        }
+
+        .flickity-prev-next-button {
+            width: 44px;
+            height: 44px;
+            top: -20%;
+
+            &.previous {
+                left: -10px;
+            }
+
+            &.next {
+                right: -10px;
             }
         }
     }
@@ -74,92 +158,124 @@
         text-align: center;
     }
 
-    .gallery {
-        margin-top: 20px 
-        img {
-            max-height: 90px;
-            max-width: 150px;
-            margin: 20px;
-        }
-    }
+    // .gallery {
+    //     margin-top: 20px 
+    //     img {
+    //         max-height: 90px;
+    //         max-width: 150px;
+    //         margin: 20px;
+    //     }
+    // }
 
-    .methodology {
-        > div:nth-of-type(2) {
-            margin-top: -50px;
-        }
-    }
+    // .methodology {
+    //     > div:nth-of-type(2) {
+    //         margin-top: -50px;
+    //     }
+    // }
 
     .graphic-layer {
-        > div {
+        >div {
             order: 3;
             margin-top: 50px;
             margin-bottom: 100px;
         }
+
         .graphic-layer__graphic--mobile {
             display: block !important;
             order: 2;
         }
     }
 
+    .section-heading {
+        font-size: 500%;
+    }
+
     .services {
         margin-top: 100px;
-        .services__service {
-            grid-column-start: 1 !important;
-            grid-column-end: 5 !important;
-            display: flex;
-            flex-wrap: wrap;
+
+        > .pv100 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .service-columns {
+            flex-direction: column;
+        }
+
+        .service-columns__service {
             img {
                 padding-right: 0;
                 width: 100%;
                 order: -1;
                 margin-bottom: 20px;
             }
+
             h3 {
                 font-size: 1000%;
                 width: 20%;
                 margin-bottom: 20px;
             }
-            h4, 
+
+            h4,
             p {
-                padding-right: 0;
-                width: 79%;
-                padding-left: 20px;
+                width: 100%;
             }
+
             h4 {
                 margin-top: 30px;
             }
-            p {
-                margin-left: 20%;
-                margin-top: -40px;
-            }
-            .expanders p {
-                width: 100%;
-                margin-left: 0;
-                margin-top: 0;
-                padding-left: 0;
+
+            .expanders {
+                margin-top: 30px !important;
+
+                p {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-top: 0;
+                    padding-left: 0;
+                }
             }
         }
     }
 
+    .inneraction-lab.expanders {
+        margin-bottom: 40px;
+    }
+
     .resources {
-        .resources__post a {
-            height: 400px;
-            margin-bottom: 20px;
-            .background {
-                height: 200px;
+
+        .background {
+            height: 200px !important;
+            div{
+                background-position: center !important;
             }
+        }
+
+        .resources__post {
             .button {
-                top: auto;
+                top: auto !important;
                 bottom: 0;
+                width: 45px !important;
+                height: 28px !important;
                 padding: 3px 16px 7px 16px;
+                a{
+                    height: 100% !important;
+                    margin: 0 !important;
+                }
             }
-            h4 {
-                margin-top: -60px;
+
+            &__item{
+                min-height: auto !important;
             }
+        }
+        .resources__post a {
+            // height: 400px;
+            margin-bottom: 20px;
             h5 {
                 margin-bottom: 7px;
             }
         }
+
         .resources__archives-cta {
             text-align: right;
         }
@@ -169,6 +285,7 @@
         .background {
             height: 340px;
         }
+
         form .half {
             width: 100%;
         }
@@ -179,5 +296,9 @@
             margin-top: 30px;
             padding-top: 20px;
         }
+    }
+
+    .inneraction-lab:after {
+        display: none;
     }
 }
